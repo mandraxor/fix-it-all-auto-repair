@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initLanguageToggle();
   initLiveHours();
   initMobileMenu();
+  initActiveNav();
+  initQueryParamPrefill();
   initServiceFilters();
   initCouponClaim();
   initReviewFilters();
@@ -26,17 +28,40 @@ document.addEventListener('DOMContentLoaded', () => {
    ========================================================================== */
 const I18N = {
   en: {
-    // Navigation
+    // Navigation & Breadcrumbs
+    "nav.home": "Home",
     "nav.services": "Services",
     "nav.specials": "Specials & Coupons",
+    "nav.about": "About Us",
     "nav.why_us": "Why Us",
     "nav.reviews": "5.0★ Reviews",
+    "nav.contact": "Contact & Booking",
     "nav.location": "Location & Hours",
     "nav.faq": "FAQ",
     "nav.estimate": "Free Estimate",
     "nav.call_now": "Call Now: (702) 326-7375",
     "nav.guarantee": "100% Work Guaranteed",
     "nav.spanish_badge": "¡Hablamos Español!",
+    "nav.language": "Language / Idioma",
+
+    "crumb.home": "Home",
+    "crumb.services": "Services",
+    "crumb.specials": "Specials & Deals",
+    "crumb.about": "About Us",
+    "crumb.reviews": "5.0★ Reviews",
+    "crumb.contact": "Contact & Booking",
+
+    // Subpage Hero Headers
+    "services.page_title": "Full-Service Automotive Excellence in Las Vegas",
+    "services.page_desc": "Certified master mechanics Antonio & Lorenzo service all makes and models with transparent pricing and 100% work guaranteed.",
+    "specials.page_title": "Las Vegas Auto Repair Specials & Discount Coupons",
+    "specials.page_desc": "Present coupons on your phone or claim online to lock in exclusive rates on synthetic oil changes, brake repairs, and computerized diagnostics.",
+    "about.page_title": "About Fix It All Auto Repair – Meet Antonio & Lorenzo",
+    "about.page_desc": "Honest, fast, independent mechanics serving Las Vegas drivers with zero dealership markups and genuine family care.",
+    "reviews.page_title": "Verified 5.0★ Customer Reviews & Testimonials",
+    "reviews.page_desc": "Over 114+ real Las Vegas drivers trust Fix It All Auto Repair for honesty, speed, and master mechanical craftsmanship.",
+    "contact.page_title": "Contact Us & Request a Free Estimate",
+    "contact.page_desc": "Convenient Westside shop located at 3100 W Sirius Ave Ste 107B. Open 7 days a week.",
 
     // Hero Section
     "hero.rating": "5.0 ★ Google Rating",
@@ -216,17 +241,40 @@ const I18N = {
   },
 
   es: {
-    // Navigation
+    // Navigation & Breadcrumbs
+    "nav.home": "Inicio",
     "nav.services": "Servicios",
     "nav.specials": "Especiales y Cupones",
+    "nav.about": "Sobre Nosotros",
     "nav.why_us": "¿Por Qué Nosotros?",
     "nav.reviews": "Reseñas 5.0★",
+    "nav.contact": "Contacto y Citas",
     "nav.location": "Ubicación y Horario",
     "nav.faq": "Preguntas Frecuentes",
     "nav.estimate": "Presupuesto Gratis",
     "nav.call_now": "Llamar: (702) 326-7375",
     "nav.guarantee": "100% Trabajo Garantizado",
     "nav.spanish_badge": "¡Hablamos Español!",
+    "nav.language": "Idioma / Language",
+
+    "crumb.home": "Inicio",
+    "crumb.services": "Servicios",
+    "crumb.specials": "Especiales y Ofertas",
+    "crumb.about": "Sobre Nosotros",
+    "crumb.reviews": "Reseñas 5.0★",
+    "crumb.contact": "Contacto y Citas",
+
+    // Subpage Hero Headers
+    "services.page_title": "Excelencia en Reparación Automotriz en Las Vegas",
+    "services.page_desc": "Los maestros mecánicos Antonio y Lorenzo atienden todas las marcas y modelos con precios transparentes y 100% de trabajo garantizado.",
+    "specials.page_title": "Especiales de Reparación y Cupones con Descuento en Las Vegas",
+    "specials.page_desc": "Muestre los cupones en su teléfono o reclame en línea para asegurar tarifas exclusivas en cambios de aceite, frenos y diagnóstico computarizado.",
+    "about.page_title": "Sobre Fix It All Auto Repair – Conozca a Antonio y Lorenzo",
+    "about.page_desc": "Mecánicos honestos, rápidos e independientes que atienden a los conductores de Las Vegas sin sobreprecios de concesionarios y con trato familiar.",
+    "reviews.page_title": "Reseñas y Testimonios de Clientes Verificados 5.0★",
+    "reviews.page_desc": "Más de 114 conductores reales en Las Vegas confían en Fix It All Auto Repair por honestidad, rapidez y verdadera maestría mecánica.",
+    "contact.page_title": "Contáctenos y Solicite su Presupuesto Gratis",
+    "contact.page_desc": "Taller conveniente en Westside ubicado en 3100 W Sirius Ave Ste 107B. Abiertos los 7 días de la semana.",
 
     // Hero Section
     "hero.rating": "5.0 ★ Calificación Google",
@@ -661,10 +709,15 @@ function initCouponClaim() {
       const formSection = document.getElementById('appointment-form');
       if (formSection) {
         formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        promoInput.classList.add('ring-2', 'ring-red-500', 'bg-red-950/30');
-        setTimeout(() => {
-          promoInput.classList.remove('ring-2', 'ring-red-500', 'bg-red-950/30');
-        }, 3000);
+        if (promoInput) {
+          promoInput.classList.add('ring-2', 'ring-red-500', 'bg-red-950/30');
+          setTimeout(() => {
+            promoInput.classList.remove('ring-2', 'ring-red-500', 'bg-red-950/30');
+          }, 3000);
+        }
+      } else {
+        // Redirect to contact.html with pre-selected query parameters
+        window.location.href = `contact.html?promo=${encodeURIComponent(code)}&service=${encodeURIComponent(serviceValue)}&title=${encodeURIComponent(offerTitle)}#appointment-form`;
       }
     });
   });
@@ -887,3 +940,64 @@ function initDatePicker() {
     dateInput.setAttribute('min', today);
   }
 }
+
+/* ==========================================================================
+   12. Multi-Page Active Navigation Highlighter
+   ========================================================================== */
+function initActiveNav() {
+  const currentPath = window.location.pathname.toLowerCase();
+  const page = currentPath.split('/').pop() || 'index.html';
+
+  const navLinks = document.querySelectorAll('nav a, #mobileMenu a');
+  navLinks.forEach(link => {
+    const href = (link.getAttribute('href') || '').toLowerCase().split('#')[0];
+    if (!href) return;
+    
+    const linkPage = href.split('/').pop();
+    if ((page === '' || page === 'index.html' || page === 'index') && (linkPage === '' || linkPage === 'index.html' || linkPage === '/')) {
+      link.classList.add('active');
+    } else if (linkPage && page === linkPage) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+/* ==========================================================================
+   13. URL Query Parameter Pre-fill for Contact / Estimate Form
+   ========================================================================== */
+function initQueryParamPrefill() {
+  const params = new URLSearchParams(window.location.search);
+  const promo = params.get('promo');
+  const service = params.get('service');
+  const title = params.get('title');
+
+  const promoInput = document.getElementById('promoCodeInput');
+  const serviceSelect = document.getElementById('serviceSelect');
+  const promoNotice = document.getElementById('appliedPromoNotice');
+  const promoNoticeText = document.getElementById('appliedPromoText');
+
+  if (promo && promoInput) {
+    promoInput.value = promo;
+    promoInput.classList.add('ring-2', 'ring-red-500', 'bg-red-950/30');
+  }
+
+  if (service && serviceSelect) {
+    for (let i = 0; i < serviceSelect.options.length; i++) {
+      const optText = serviceSelect.options[i].text.toLowerCase();
+      const optVal = serviceSelect.options[i].value.toLowerCase();
+      const sLower = service.toLowerCase();
+      if (optText.includes(sLower) || optVal.includes(sLower) || sLower.includes(optVal)) {
+        serviceSelect.selectedIndex = i;
+        break;
+      }
+    }
+  }
+
+  if (promo && promoNotice && promoNoticeText) {
+    promoNoticeText.textContent = `Applied Promo: ${title || promo} (Code: ${promo})`;
+    promoNotice.classList.remove('hidden');
+  }
+}
+
