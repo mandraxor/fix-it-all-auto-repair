@@ -322,11 +322,11 @@
             <!-- Driving Directions Guide -->
             <div class="bg-slate-900/60 rounded-2xl p-6 border border-slate-800 text-xs text-slate-400 space-y-3">
               <h4 class="font-bold text-white uppercase tracking-wider text-[11px] flex items-center gap-2">
-                <i data-lucide="compass" class="w-4 h-4 text-red-400"></i> Quick Driving Directions:
+                <i data-lucide="compass" class="w-4 h-4 text-red-400"></i> <span data-i18n="loc.dir_title">Quick Driving Directions:</span>
               </h4>
-              <p>• <strong>From Las Vegas Strip:</strong> Head west on Spring Mountain Rd or Desert Inn Rd, turn south onto Valley View Blvd, and take Sirius Ave right into the plaza.</p>
-              <p>• <strong>From I-15 Freeway:</strong> Take Exit 39 (Spring Mountain Rd or Sahara Ave), head west to Valley View Blvd, then south to Sirius Ave.</p>
-              <p>• <strong>From Chinatown LV:</strong> We are just 2 minutes south of Spring Mountain Rd.</p>
+              <p data-i18n-html="loc.dir_strip">• <strong>From Las Vegas Strip:</strong> Head west on Spring Mountain Rd or Desert Inn Rd, turn south onto Valley View Blvd, and take Sirius Ave right into the plaza.</p>
+              <p data-i18n-html="loc.dir_i15">• <strong>From I-15 Freeway:</strong> Take Exit 39 (Spring Mountain Rd or Sahara Ave), head west to Valley View Blvd, then south to Sirius Ave.</p>
+              <p data-i18n-html="loc.dir_chinatown">• <strong>From Chinatown LV:</strong> We are just 2 minutes south of Spring Mountain Rd.</p>
             </div>
 
             <!-- Interactive Embedded Google Map -->
@@ -421,13 +421,13 @@
                     <label for="serviceSelect" class="block text-xs font-semibold text-slate-300 mb-1.5" data-i18n="form.lbl_service">Primary Service Needed *</label>
                     <select id="serviceSelect" name="service" required
                       class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-red-500 transition-all text-base sm:text-sm">
-                      <option value="Oil & Filter Services">Oil & Filter Services ($29.95 Special)</option>
-                      <option value="Brake System Repairs">Brake System Repairs ($20 OFF)</option>
-                      <option value="Advanced Diagnostics & Check Engine Light">Diagnostics & Check Engine Light (FREE Scan)</option>
-                      <option value="Engine & Transmission Repair">Engine & Transmission Repair</option>
-                      <option value="General Maintenance & Safety Inspection">General Maintenance & 30k/60k/90k</option>
-                      <option value="Suspension, Steering, and Belts/Hoses">Suspension, Steering & Struts</option>
-                      <option value="Other Repairs / Unsure">Other Repairs / Unsure (Describe below)</option>
+                      <option value="Oil & Filter Services" data-i18n="form.opt_oil">Oil & Filter Services ($29.95 Special)</option>
+                      <option value="Brake System Repairs" data-i18n="form.opt_brakes">Brake System Repairs ($20 OFF)</option>
+                      <option value="Advanced Diagnostics & Check Engine Light" data-i18n="form.opt_diag">Diagnostics & Check Engine Light (FREE Scan)</option>
+                      <option value="Engine & Transmission Repair" data-i18n="form.opt_engine">Engine & Transmission Repair</option>
+                      <option value="General Maintenance & Safety Inspection" data-i18n="form.opt_maint">General Maintenance & 30k/60k/90k</option>
+                      <option value="Suspension, Steering, and Belts/Hoses" data-i18n="form.opt_susp">Suspension, Steering & Struts</option>
+                      <option value="Other Repairs / Unsure" data-i18n="form.opt_other">Other Repairs / Unsure (Describe below)</option>
                     </select>
                   </div>
                   <div>
@@ -448,10 +448,10 @@
                     <label for="preferredTime" class="block text-xs font-semibold text-slate-300 mb-1.5" data-i18n="form.lbl_time">Preferred Time of Day</label>
                     <select id="preferredTime" name="time"
                       class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-red-500 transition-all text-base sm:text-sm">
-                      <option value="Morning (8:00 AM – 11:00 AM)">Morning (8:00 AM – 11:00 AM)</option>
-                      <option value="Mid-Day (11:00 AM – 2:00 PM)">Mid-Day (11:00 AM – 2:00 PM)</option>
-                      <option value="Afternoon (2:00 PM – 5:30 PM)">Afternoon (2:00 PM – 5:30 PM)</option>
-                      <option value="First Available Slot">First Available Slot</option>
+                      <option value="Morning (8:00 AM – 11:00 AM)" data-i18n="form.time_morning">Morning (8:00 AM – 11:00 AM)</option>
+                      <option value="Mid-Day (11:00 AM – 2:00 PM)" data-i18n="form.time_midday">Mid-Day (11:00 AM – 2:00 PM)</option>
+                      <option value="Afternoon (2:00 PM – 5:30 PM)" data-i18n="form.time_afternoon">Afternoon (2:00 PM – 5:30 PM)</option>
+                      <option value="First Available Slot" data-i18n="form.time_any">First Available Slot</option>
                     </select>
                   </div>
                 </div>
@@ -595,8 +595,8 @@
             <i data-lucide="check-circle" class="w-6 h-6"></i>
           </div>
           <div>
-            <h3 class="text-lg font-bold text-white font-['Outfit']">Estimate Request Received!</h3>
-            <p class="text-xs text-slate-400">Reference: <span id="modalConfirmCode" class="text-red-400 font-mono font-bold">FIA-89102-1001</span></p>
+            <h3 class="text-lg font-bold text-white font-['Outfit']" data-i18n="modal.title">Estimate Request Received!</h3>
+            <p class="text-xs text-slate-400"><span data-i18n="modal.ref">Reference:</span> <span id="modalConfirmCode" class="text-red-400 font-mono font-bold">FIA-89102-1001</span></p>
           </div>
         </div>
         <button id="closeModalBtn" class="text-slate-400 hover:text-white p-1">
@@ -606,7 +606,7 @@
 
       <!-- Modal Body Summary -->
       <div class="py-5">
-        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4" data-i18n="modal.desc">
           Thank you! Master Technicians Antonio & Lorenzo have received your vehicle details and will review them promptly.
         </p>
         
@@ -616,17 +616,17 @@
 
         <div class="bg-emerald-950/40 border border-emerald-500/30 rounded-lg p-3 text-xs text-emerald-300 flex items-center gap-2">
           <i data-lucide="clock" class="w-4 h-4 flex-shrink-0"></i>
-          <span>We typically respond within 15–30 minutes during shop hours (Daily until 6 PM).</span>
+          <span data-i18n="modal.response_time">We typically respond within 15–30 minutes during shop hours (Daily until 6 PM).</span>
         </div>
       </div>
 
       <!-- Modal Actions -->
       <div class="flex flex-col sm:flex-row gap-3 pt-2">
         <a href="tel:7023267375" class="w-full sm:w-1/2 py-3 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-xl flex items-center justify-center gap-2 shadow-lg transition-colors">
-          <i data-lucide="phone-call" class="w-4 h-4"></i> Call to Confirm Now
+          <i data-lucide="phone-call" class="w-4 h-4"></i> <span data-i18n="modal.call_confirm">Call to Confirm Now</span>
         </a>
         <a href="https://maps.google.com/?q=3100+W+Sirius+Ave+Ste+107B+Las+Vegas+NV+89102" target="_blank" rel="noopener noreferrer" class="w-full sm:w-1/2 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs rounded-xl border border-slate-700 flex items-center justify-center gap-2 transition-colors">
-          <i data-lucide="navigation" class="w-4 h-4"></i> Get Directions
+          <i data-lucide="navigation" class="w-4 h-4"></i> <span data-i18n="modal.get_directions">Get Directions</span>
         </a>
       </div>
 

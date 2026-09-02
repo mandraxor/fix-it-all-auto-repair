@@ -246,10 +246,10 @@
         
         <div class="inline-flex items-center gap-3">
           <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-bold flex items-center gap-2 shadow-sm transition-all">
-            <i data-lucide="printer" class="w-4 h-4 text-red-400"></i> Print or Save Coupons
+            <i data-lucide="printer" class="w-4 h-4 text-red-400"></i> <span data-i18n="specials.print_btn">Print or Save Coupons</span>
           </button>
           <a href="contact.html#appointment-form" class="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-bold flex items-center gap-2 shadow-md shadow-red-600/30 transition-all">
-            <i data-lucide="calendar" class="w-4 h-4"></i> Book with Promo
+            <i data-lucide="calendar" class="w-4 h-4"></i> <span data-i18n="specials.book_promo">Book with Promo</span>
           </a>
         </div>
       </div>
@@ -377,11 +377,11 @@
           <div class="bg-card-gradient coupon-border rounded-2xl p-6 flex flex-col justify-between relative group hover:border-blue-500 transition-colors">
             <div>
               <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
-                <span class="font-bold text-blue-400 uppercase tracking-wider">Community Honor</span>
+                <span class="font-bold text-blue-400 uppercase tracking-wider" data-i18n="specials.c4_tag">Community Honor</span>
                 <span class="font-mono bg-slate-800 px-2 py-0.5 rounded text-slate-300">HERO10</span>
               </div>
-              <h3 class="text-xl font-bold text-white font-['Outfit'] mb-2">10% Off Military & Seniors</h3>
-              <p class="text-slate-400 text-xs leading-relaxed mb-6">
+              <h3 class="text-xl font-bold text-white font-['Outfit'] mb-2" data-i18n="specials.c4_title">10% Off Military & Seniors</h3>
+              <p class="text-slate-400 text-xs leading-relaxed mb-6" data-i18n="specials.c4_desc">
                 Active military, veterans, first responders, and seniors (65+) save 10% on all mechanical labor up to $100 value.
               </p>
             </div>
@@ -389,7 +389,7 @@
               data-code="HERO10"
               data-service="General Maintenance & Safety Inspection"
               data-title="10% Military & Senior Discount">
-              <i data-lucide="shield" class="w-3.5 h-3.5"></i> <span>Claim 10% Discount</span>
+              <i data-lucide="shield" class="w-3.5 h-3.5"></i> <span data-i18n="specials.c4_btn">Claim 10% Discount</span>
             </button>
           </div>
 
@@ -398,9 +398,9 @@
         <!-- Coupon Fine Print / Policy -->
         <div class="mt-12 p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 text-slate-400 text-xs leading-relaxed">
           <h4 class="font-bold text-slate-300 mb-2 flex items-center gap-2">
-            <i data-lucide="info" class="w-4 h-4 text-red-500"></i> Promotional Terms & Conditions:
+            <i data-lucide="info" class="w-4 h-4 text-red-500"></i> <span data-i18n="specials.terms_title">Promotional Terms & Conditions:</span>
           </h4>
-          <p>
+          <p data-i18n="specials.terms_desc">
             Coupons must be presented at time of estimate or vehicle check-in (show on mobile phone screen or print). Cannot be combined with other offers or applied to past invoices. Oil change special covers up to 5 quarts of synthetic blend oil; cartridge filters, specialty European oils, and additional quarts extra. Valid only at Fix It All Auto Repair, 3100 W Sirius Ave Ste 107B, Las Vegas, NV 89102.
           </p>
         </div>

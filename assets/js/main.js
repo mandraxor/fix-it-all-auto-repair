@@ -191,6 +191,10 @@ const I18N = {
     "loc.sat": "Saturday",
     "loc.sun": "Sunday",
     "loc.open_note": "✨ Open 7 Days a Week for Your Convenience!",
+    "loc.dir_title": "Quick Driving Directions:",
+    "loc.dir_strip": "• <strong>From Las Vegas Strip:</strong> Head west on Spring Mountain Rd or Desert Inn Rd, turn south onto Valley View Blvd, and take Sirius Ave right into the plaza.",
+    "loc.dir_i15": "• <strong>From I-15 Freeway:</strong> Take Exit 39 (Spring Mountain Rd or Sahara Ave), head west to Valley View Blvd, then south to Sirius Ave.",
+    "loc.dir_chinatown": "• <strong>From Chinatown LV:</strong> We are just 2 minutes south of Spring Mountain Rd.",
 
     // Form
     "form.badge": "Fast & Transparent Quotes",
@@ -211,6 +215,124 @@ const I18N = {
     "form.confidential": "Your information is 100% confidential. No spam or pressure ever.",
     "form.submit_btn": "Request Free Estimate",
     "form.promo_active": "PROMO ACTIVE",
+
+    // Form Dropdown Options
+    "form.opt_placeholder": "Select a Service",
+    "form.opt_oil": "Oil & Filter Services ($29.95 Special)",
+    "form.opt_brakes": "Brake System Repairs ($20 OFF)",
+    "form.opt_diag": "Diagnostics & Check Engine Light (FREE Scan)",
+    "form.opt_engine": "Engine & Transmission Repair",
+    "form.opt_maint": "General Maintenance & 30k/60k/90k",
+    "form.opt_susp": "Suspension, Steering & Struts",
+    "form.opt_other": "Other Repairs / Unsure (Describe below)",
+    "form.time_morning": "Morning (8:00 AM – 11:00 AM)",
+    "form.time_midday": "Mid-Day (11:00 AM – 2:00 PM)",
+    "form.time_afternoon": "Afternoon (2:00 PM – 5:30 PM)",
+    "form.time_any": "First Available Slot",
+
+    // Modal Confirmation
+    "modal.title": "Estimate Request Received!",
+    "modal.ref": "Reference:",
+    "modal.desc": "Thank you! Master Technicians Antonio & Lorenzo have received your vehicle details and will review them promptly.",
+    "modal.response_time": "We typically respond within 15–30 minutes during shop hours (Daily until 6 PM).",
+    "modal.call_confirm": "Call to Confirm Now",
+    "modal.get_directions": "Get Directions",
+
+    // About Us Page Details
+    "about.meet_title": "Meet Antonio (Toni) & Lorenzo",
+    "about.meet_desc": "Two master mechanics with over 40+ years of combined hands-on experience under the hood. When you bring your car to Fix It All, the owners work on your vehicle personally.",
+    "about.call_techs": "Call Master Techs Directly",
+    "about.req_estimate": "Request Estimate",
+    "about.toni_role": "Lead Diagnostic Specialist & Co-Owner",
+    "about.toni_bio": "Toni has diagnosed and resolved thousands of complex mechanical and electrical engine faults across Las Vegas. Known for his straight talk and deep diagnostic precision, he never recommends a replacement part unless it is genuinely needed.",
+    "about.toni_spec1": "Specialty: Computerized OBD-II diagnostics & electrical systems",
+    "about.toni_spec2": "Specialty: Engine rebuilds, head gaskets & timing belts",
+    "about.toni_bilingual": "Bilingual: Fluent in English and Spanish",
+    "about.lorenzo_role": "Heavy Line Mechanical Specialist & Co-Owner",
+    "about.lorenzo_bio": "Lorenzo is a master of vehicle drivetrains, transmission rebuilds, and heavy chassis suspension. His focus on craftsmanship ensures that your vehicle drives as smooth, responsive, and secure as the day it rolled off the factory floor.",
+    "about.lorenzo_spec1": "Specialty: Transmission servicing, fluid flushes & clutch repairs",
+    "about.lorenzo_spec2": "Specialty: Precision brake systems, rotors, calipers & ABS",
+    "about.lorenzo_spec3": "Specialty: Struts, shocks, control arms & front-end steering",
+    "about.story_tag": "Our Story & Mission",
+    "about.story_title": "Restoring Honesty and Fair Pricing to Auto Repair in Las Vegas",
+    "about.story_p1": "After years of watching Las Vegas drivers get overcharged by big-box dealership service departments and chain repair franchises, Antonio and Lorenzo opened Fix It All Auto Repair at 3100 W Sirius Ave.",
+    "about.story_p2": "Our pledge is simple: treat every car like our own family's vehicle. That means clear upfront estimates, zero high-pressure sales pitches, and 100% honest explanations before any work begins.",
+    "about.quote_text": "\"We treat every customer like family. When you come to Sirius Ave, you get straight answers, fair prices, and our personal guarantee on every repair.\"",
+    "about.quote_author": "— Antonio (Toni) & Lorenzo",
+
+    // Services Catalog Detailed Features & Times
+    "services.s1_f1": "Synthetic blend & full synthetic options",
+    "services.s1_f2": "OEM quality oil filter replacement",
+    "services.s1_f3": "Essential fluid top-offs (coolant, washer, brake)",
+    "services.s1_f4": "Complimentary 25-point safety inspection",
+    "services.s1_time": "⏱️ Avg. 30–45 mins",
+    "services.s2_f1": "Ceramic & semi-metallic brake pad install",
+    "services.s2_f2": "Rotor resurfacing & full disc replacement",
+    "services.s2_f3": "Brake caliper repair & hydraulic line check",
+    "services.s2_f4": "High-temp brake fluid bleed & flush",
+    "services.s2_time": "⏱️ Same-day service",
+    "services.s3_f1": "OBD-II computerized error code readout",
+    "services.s3_f2": "O2, MAF, knock & camshaft sensor testing",
+    "services.s3_f3": "Electrical wiring & battery/alternator health",
+    "services.s3_f4": "NV state smog & emissions pre-testing",
+    "services.s3_time": "⏱️ Fast 15-min scan",
+    "services.s4_f1": "Timing belt & water pump replacement",
+    "services.s4_f2": "Cylinder head gasket & valve cover repairs",
+    "services.s4_f3": "Automatic & manual transmission servicing",
+    "services.s4_f4": "Full engine rebuilds & replacement swaps",
+    "services.s4_time": "🛡️ 100% Work Guaranteed",
+    "services.s5_f1": "30k, 60k, 90k, and 120k factory intervals",
+    "services.s5_f2": "Spark plug, ignition coil & wire replacements",
+    "services.s5_f3": "Engine coolant radiator flush & thermostat",
+    "services.s5_f4": "Battery load testing & terminal service",
+    "services.s5_time": "📋 Comprehensive Report",
+    "services.s6_f1": "Shocks, struts & coil spring replacements",
+    "services.s6_f2": "Tie rods, ball joints & sway bar links",
+    "services.s6_f3": "Power steering pump & rack-and-pinion",
+    "services.s6_f4": "Serpentine belts, AC belts & radiator hoses",
+    "services.s6_time": "🚗 Ride Comfort Check",
+
+    // Dealership Comparison
+    "why.dealer_title": "Typical Las Vegas Dealerships",
+    "why.d1": "$180 – $240+ hourly labor rates",
+    "why.d2": "Aggressive commissioned service advisor upsells",
+    "why.d3": "Days-long turnaround times for basic repairs",
+    "why.d4": "Impersonal corporate customer service",
+    "why.fia_title": "Fix It All Auto Repair (Sirius Ave)",
+    "why.smart_choice": "THE SMART CHOICE",
+    "why.f1": "Fair, upfront, transparent pricing on all labor & parts",
+    "why.f2": "100% honest advice from Master Techs Antonio & Lorenzo",
+    "why.f3": "Same-day turnaround on most brake and maintenance jobs",
+    "why.f4": "100% work guaranteed with genuine personal care",
+
+    // Specials Page Additions
+    "specials.print_btn": "Print or Save Coupons",
+    "specials.book_promo": "Book with Promo",
+    "specials.c4_tag": "Community Honor",
+    "specials.c4_title": "10% Off Military & Seniors",
+    "specials.c4_desc": "Active military, veterans, first responders, and seniors (65+) save 10% on all mechanical labor up to $100 value.",
+    "specials.c4_btn": "Claim 10% Discount",
+    "specials.terms_title": "Promotional Terms & Conditions:",
+    "specials.terms_desc": "Coupons must be presented at time of estimate or vehicle check-in (show on mobile phone screen or print). Cannot be combined with other offers or applied to past invoices. Oil change special covers up to 5 quarts of synthetic blend oil; cartridge filters, specialty European oils, and additional quarts extra. Valid only at Fix It All Auto Repair, 3100 W Sirius Ave Ste 107B, Las Vegas, NV 89102.",
+
+    // Reviews Page Additions
+    "reviews.tab_all": "All Reviews (114+)",
+    "reviews.tab_brakes": "Brakes & Rotors",
+    "reviews.tab_oil": "Oil & Maintenance",
+    "reviews.tab_diag": "Diagnostics & Check Engine",
+    "reviews.tab_spanish": "Hablamos Español",
+    "reviews.google_rating": "5.0 on Google (114+ Reviews)",
+    "reviews.yelp_rating": "5.0 on Yelp Top Rated",
+    "reviews.cta_title": "Are You a Recent Customer?",
+    "reviews.cta_desc": "Your honest feedback means everything to our independent shop. Please take a moment to share your experience!",
+    "reviews.btn_google": "Review on Google",
+    "reviews.btn_yelp": "Review on Yelp",
+    "reviews.r1_quote": "\"Antonio and Lorenzo are genuine lifesavers. My front brakes were grinding terribly. They gave me a fair quote upfront, walked me through the rotor condition, and completed the job in under 90 minutes. Zero dealership games.\"",
+    "reviews.r2_quote": "\"Toni scanned my check engine light in 15 minutes. The dealership wanted $1,200 for unnecessary parts! Toni pinpointed a simple faulty O2 sensor, replaced it same day, and saved me nearly a thousand dollars. Best mechanic in Vegas!\"",
+    "reviews.r3_quote": "\"Took my Ford truck in for the $29.95 synthetic blend oil special. They performed a comprehensive 25-point inspection, checked tire pressures, and topped all fluids. Super fast and courteous. Won't go anywhere else.\"",
+    "reviews.r4_quote": "\"Excelente servicio en español. Toni y Lorenzo me explicaron todo detalladamente antes de tocar mi transmisión. Precios sumamente justos, trabajo rápido y honesto. Se los recomiendo a toda la comunidad latina en Las Vegas.\"",
+    "reviews.r5_quote": "\"Honesty is rare in the car repair industry, especially in Las Vegas. These guys are 100% genuine master mechanics. They showed me the old parts and explained exactly what failed and why. Highly recommended.\"",
+    "reviews.r6_quote": "\"Fast, clean, professional. As a woman, taking your car to a mechanic can feel stressful, but Antonio made me feel completely comfortable and respected. Car runs like brand new. Thank you Fix It All!\"",
 
     // FAQ
     "faq.badge": "Clear Answers",
@@ -404,6 +526,10 @@ const I18N = {
     "loc.sat": "Sábado",
     "loc.sun": "Domingo",
     "loc.open_note": "✨ ¡Abiertos los 7 Días de la Semana para su Comodidad!",
+    "loc.dir_title": "Cómo Llegar al Taller:",
+    "loc.dir_strip": "• <strong>Desde Las Vegas Strip:</strong> Diríjase al oeste por Spring Mountain Rd o Desert Inn Rd, doble al sur por Valley View Blvd, y entre por Sirius Ave a la plaza comercial.",
+    "loc.dir_i15": "• <strong>Desde la Autopista I-15:</strong> Tome la Salida 39 (Spring Mountain Rd o Sahara Ave), continúe al oeste hasta Valley View Blvd y doble al sur hacia Sirius Ave.",
+    "loc.dir_chinatown": "• <strong>Desde Chinatown LV:</strong> Estamos ubicados a sólo 2 minutos al sur de Spring Mountain Rd.",
 
     // Form
     "form.badge": "Presupuestos Rápidos y Claros",
@@ -424,6 +550,124 @@ const I18N = {
     "form.confidential": "Su información es 100% confidencial. Jamás enviamos spam ni presionamos.",
     "form.submit_btn": "Solicitar Presupuesto Gratis",
     "form.promo_active": "CUPÓN APLICADO",
+
+    // Form Dropdown Options
+    "form.opt_placeholder": "Seleccione un Servicio",
+    "form.opt_oil": "Cambio de Aceite y Filtro (Especial $29.95)",
+    "form.opt_brakes": "Reparación del Sistema de Frenos ($20 OFF)",
+    "form.opt_diag": "Diagnóstico Computarizado y Check Engine (Escaneo Gratis)",
+    "form.opt_engine": "Reparación de Motor y Transmisión",
+    "form.opt_maint": "Mantenimiento General y 30k/60k/90k",
+    "form.opt_susp": "Suspensión, Dirección y Amortiguadores",
+    "form.opt_other": "Otras Reparaciones / No estoy seguro (describir abajo)",
+    "form.time_morning": "Mañana (8:00 AM – 11:00 AM)",
+    "form.time_midday": "Mediodía (11:00 AM – 2:00 PM)",
+    "form.time_afternoon": "Tarde (2:00 PM – 5:30 PM)",
+    "form.time_any": "Primer Horario Disponible",
+
+    // Modal Confirmation
+    "modal.title": "¡Solicitud de Presupuesto Recibida!",
+    "modal.ref": "Referencia:",
+    "modal.desc": "¡Muchas gracias! Los maestros mecánicos Antonio y Lorenzo han recibido los datos de su vehículo y los revisarán a la brevedad.",
+    "modal.response_time": "Normalmente respondemos en 15–30 minutos durante horas laborales (Diariamente hasta las 6 PM).",
+    "modal.call_confirm": "Llamar para Confirmar Ahora",
+    "modal.get_directions": "Ver Direcciones en Google Maps",
+
+    // About Us Page Details
+    "about.meet_title": "Conozca a Antonio (Toni) y Lorenzo",
+    "about.meet_desc": "Dos maestros mecánicos con más de 40 años de experiencia combinada bajo el capó. Cuando trae su vehículo a Fix It All, los propios dueños trabajan directamente en su auto.",
+    "about.call_techs": "Llamar a los Mecánicos Directamente",
+    "about.req_estimate": "Solicitar Presupuesto",
+    "about.toni_role": "Especialista en Diagnóstico y Co-Propietario",
+    "about.toni_bio": "Toni ha diagnosticado y resuelto miles de fallas mecánicas y eléctricas complejas en Las Vegas. Reconocido por su honestidad y precisión, jamás recomienda cambiar una pieza a menos que sea verdaderamente necesario.",
+    "about.toni_spec1": "Especialidad: Diagnóstico computarizado OBD-II y sistemas eléctricos",
+    "about.toni_spec2": "Especialidad: Reparación de motores, empaques de culata y bandas de tiempo",
+    "about.toni_bilingual": "Bilingual: Fluido en inglés y español",
+    "about.lorenzo_role": "Especialista en Mecánica Pesada y Co-Propietario",
+    "about.lorenzo_bio": "Lorenzo es un experto en trenes motrices, transmisiones y chasis. Su dedicación a la mano de obra de calidad garantiza que su automóvil ruede tan suave, seguro y firme como el día en que salió de fábrica.",
+    "about.lorenzo_spec1": "Especialidad: Servicio de transmisión, cambios de fluidos y embragues",
+    "about.lorenzo_spec2": "Especialidad: Sistemas de frenos de precisión, rotores, calipers y ABS",
+    "about.lorenzo_spec3": "Especialidad: Amortiguadores, brazos de control y suspensión delantera",
+    "about.story_tag": "Nuestra Historia y Misión",
+    "about.story_title": "Restaurando la Honestidad y Precios Justos a la Reparación Automotriz en Las Vegas",
+    "about.story_p1": "Tras años de ver cómo a los conductores de Las Vegas se les cobraba de más en concesionarios y cadenas de talleres, Antonio y Lorenzo abrieron Fix It All Auto Repair en 3100 W Sirius Ave.",
+    "about.story_p2": "Nuestra promesa es simple: tratar cada auto como si fuera el de nuestra propia familia. Eso significa presupuestos claros por adelantado, cero tácticas de venta con presión y explicaciones 100% honestas antes de iniciar cualquier trabajo.",
+    "about.quote_text": "\"Tratamos a cada cliente como a nuestra familia. Al venir a Sirius Ave, recibe respuestas directas, precios justos y nuestra garantía personal en cada reparación.\"",
+    "about.quote_author": "— Antonio (Toni) y Lorenzo",
+
+    // Services Catalog Detailed Features & Times
+    "services.s1_f1": "Opciones sintéticas y semisintéticas",
+    "services.s1_f2": "Filtro nuevo de calidad OEM",
+    "services.s1_f3": "Relleno de fluidos esenciales (refrigerante, frenos, etc.)",
+    "services.s1_f4": "Inspección integral de seguridad de 25 puntos GRATIS",
+    "services.s1_time": "⏱️ Tiempo prom. 30–45 min",
+    "services.s2_f1": "Instalación de pastillas de cerámica y semimetálicas",
+    "services.s2_f2": "Rectificación de rotores y discos nuevos",
+    "services.s2_f3": "Reparación de calipers y líneas hidráulicas",
+    "services.s2_f4": "Purga y cambio de líquido de frenos",
+    "services.s2_time": "⏱️ Servicio el mismo día",
+    "services.s3_f1": "Lectura computarizada de códigos OBD-II",
+    "services.s3_f2": "Pruebas de sensores O2, MAF, detonación y levas",
+    "services.s3_f3": "Revisión eléctrica, batería y alternador",
+    "services.s3_f4": "Pre-inspección de emisiones y smog de Nevada",
+    "services.s3_time": "⏱️ Escaneo rápido en 15 min",
+    "services.s4_f1": "Reemplazo de banda de tiempo y bomba de agua",
+    "services.s4_f2": "Empaques de cabeza de motor y tapas de válvulas",
+    "services.s4_f3": "Mantenimiento de transmisión automática y estándar",
+    "services.s4_f4": "Reconstrucción y cambio completo de motores",
+    "services.s4_time": "🛡️ 100% Trabajo Garantizado",
+    "services.s5_f1": "Servicios de agencia de 30k, 60k, 90k y 120k millas",
+    "services.s5_f2": "Cambio de bujías, bobinas de encendido y cables",
+    "services.s5_f3": "Purga de radiador, refrigerante y termostato",
+    "services.s5_f4": "Prueba de carga de batería y limpieza de terminales",
+    "services.s5_time": "📋 Reporte Completo de Inspección",
+    "services.s6_f1": "Amortiguadores, struts y resortes nuevos",
+    "services.s6_f2": "Terminales de dirección, rótulas y barras estabilizadoras",
+    "services.s6_f3": "Bomba de dirección hidráulica y cremallera",
+    "services.s6_f4": "Bandas serpentinas, bandas de AC y mangueras",
+    "services.s6_time": "🚗 Revisión de Confort y Estabilidad",
+
+    // Dealership Comparison
+    "why.dealer_title": "Concesionarios Típicos en Las Vegas",
+    "why.d1": "Tarifas de mano de obra de $180 – $240+ por hora",
+    "why.d2": "Ventas agresivas y comisiones por servicios innecesarios",
+    "why.d3": "Días de espera para reparaciones sencillas",
+    "why.d4": "Atención impersonal corporativa",
+    "why.fia_title": "Fix It All Auto Repair (Sirius Ave)",
+    "why.smart_choice": "LA ELECCIÓN INTELIGENTE",
+    "why.f1": "Precios justos, claros y transparentes en mano de obra y repuestos",
+    "why.f2": "Asesoría 100% honesta de los maestros Antonio y Lorenzo",
+    "why.f3": "Entrega el mismo día en la mayoría de servicios de frenos y mantenimiento",
+    "why.f4": "100% trabajo garantizado con auténtico trato familiar",
+
+    // Specials Page Additions
+    "specials.print_btn": "Imprimir o Guardar Cupones",
+    "specials.book_promo": "Agendar con Cupón",
+    "specials.c4_tag": "Honor a la Comunidad",
+    "specials.c4_title": "10% Descuento Militares y Adultos Mayores",
+    "specials.c4_desc": "Militares activos, veteranos, rescatistas y personas mayores (65+) ahorran 10% en mano de obra mecánica hasta $100 de valor.",
+    "specials.c4_btn": "Reclamar 10% Descuento",
+    "specials.terms_title": "Términos y Condiciones de la Promoción:",
+    "specials.terms_desc": "Los cupones deben presentarse al momento de la cotización o recepción del vehículo (en la pantalla del teléfono o impresos). No acumulable con otras promociones ni facturas pasadas. El especial de aceite cubre hasta 5 cuartos de aceite semisintético; filtros especiales de cartucho, aceites europeos y cuartos adicionales tienen costo extra. Válido únicamente en Fix It All Auto Repair, 3100 W Sirius Ave Ste 107B, Las Vegas, NV 89102.",
+
+    // Reviews Page Additions
+    "reviews.tab_all": "Todas las Reseñas (114+)",
+    "reviews.tab_brakes": "Frenos y Rotores",
+    "reviews.tab_oil": "Aceite y Mantenimiento",
+    "reviews.tab_diag": "Diagnóstico y Check Engine",
+    "reviews.tab_spanish": "Hablamos Español",
+    "reviews.google_rating": "5.0 en Google (114+ Reseñas)",
+    "reviews.yelp_rating": "5.0 en Yelp Más Valorado",
+    "reviews.cta_title": "¿Ha Sido Cliente Reciente?",
+    "reviews.cta_desc": "¡Su opinión honesta es fundamental para nuestro taller independiente! Le agradecemos compartir su experiencia.",
+    "reviews.btn_google": "Dejar Reseña en Google",
+    "reviews.btn_yelp": "Dejar Reseña en Yelp",
+    "reviews.r1_quote": "\"Antonio y Lorenzo son unos salvavidas. Mis frenos delanteros rechinaban horrible. Me dieron un precio justo desde el inicio, me mostraron el estado de los rotores y terminaron en menos de 90 minutos. Cero juegos de agencia.\"",
+    "reviews.r2_quote": "\"Toni escaneó la luz de check engine en 15 minutos. ¡La agencia quería cobrarme $1,200 por piezas que no necesitaba! Toni encontró un sensor O2 defectuoso, lo cambió el mismo día y me ahorró casi mil dólares. El mejor taller de Las Vegas.\"",
+    "reviews.r3_quote": "\"Llevé mi camioneta Ford para el especial de cambio de aceite de $29.95. Hicieron una inspección completa de 25 puntos, revisaron la presión de llantas y rellenaron todos los líquidos. Muy rápidos y amables. No voy a ningún otro lado.\"",
+    "reviews.r4_quote": "\"Excelente servicio en español. Toni y Lorenzo me explicaron todo detalladamente antes de tocar mi transmisión. Precios sumamente justos, trabajo rápido y honesto. Se los recomiendo a toda la comunidad latina en Las Vegas.\"",
+    "reviews.r5_quote": "\"La honestidad es muy escasa en los talleres mecánicos, especialmente en Las Vegas. Estos muchachos son mecánicos 100% auténticos y confiables. Me mostraron las piezas viejas y me explicaron con claridad. Muy recomendados.\"",
+    "reviews.r6_quote": "\"Rápidos, limpios y muy profesionales. Como mujer, ir al mecánico a veces puede dar desconfianza, pero Antonio me hizo sentir muy tranquila y respetada. Mi auto quedó como nuevo. ¡Muchas gracias a Fix It All!\"",
 
     // FAQ
     "faq.badge": "Respuestas Claras",
@@ -762,7 +1006,7 @@ function initAppointmentForm() {
   const closeModalBtn = document.getElementById('closeModalBtn');
   const modalConfirmCode = document.getElementById('modalConfirmCode');
   const modalDetails = document.getElementById('modalDetails');
-  const submitBtn = document.getElementById('formSubmitBtn');
+  const submitBtn = document.getElementById('formSubmitBtn') || form.querySelector('button[type="submit"]');
 
   if (!form) return;
 
@@ -775,24 +1019,29 @@ function initAppointmentForm() {
     }
 
     const dict = I18N[currentLang] || I18N.en;
-    const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = `
-      <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-      </svg>
-      ${dict["form.processing"] || "Processing Request..."}
-    `;
-    submitBtn.disabled = true;
+    const originalText = submitBtn ? submitBtn.innerHTML : '';
+    if (submitBtn) {
+      submitBtn.innerHTML = `
+        <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        ${dict["form.processing"] || "Processing Request..."}
+      `;
+      submitBtn.disabled = true;
+    }
 
     const formData = new FormData(form);
-    const fullName = formData.get('fullName') || 'Valued Customer';
-    const phone = formData.get('phone') || '(702) 326-7375';
-    const vehicle = `${formData.get('vehicleYear') || ''} ${formData.get('vehicleMake') || ''} ${formData.get('vehicleModel') || ''}`.trim() || 'Vehicle';
+    const fullName = formData.get('fullName') || formData.get('name') || 'Valued Customer';
+    const phone = formData.get('phone') || formData.get('phoneNumber') || '(702) 326-7375';
+    const vehicleYear = formData.get('vehicleYear') || formData.get('year') || '';
+    const vehicleMake = formData.get('vehicleMake') || formData.get('make') || '';
+    const vehicleModel = formData.get('vehicleModel') || formData.get('model') || '';
+    const vehicle = `${vehicleYear} ${vehicleMake} ${vehicleModel}`.trim() || 'Vehicle';
     const service = formData.get('service') || 'General Inspection';
-    const date = formData.get('preferredDate') || 'As soon as possible';
-    const time = formData.get('preferredTime') || 'Morning (8am - 12pm)';
-    const promo = formData.get('promoCode') || '';
+    const date = formData.get('preferredDate') || formData.get('date') || (currentLang === 'es' ? 'Lo antes posible' : 'As soon as possible');
+    const time = formData.get('preferredTime') || formData.get('time') || (currentLang === 'es' ? 'Primer Horario Disponible' : 'First Available Slot');
+    const promo = formData.get('promoCode') || formData.get('promo') || '';
 
     const randomNum = Math.floor(1000 + Math.random() * 9000);
     const confirmCode = `FIA-89102-${randomNum}`;
