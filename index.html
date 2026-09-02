@@ -159,25 +159,28 @@
             <span class="live-indicator-ping"></span>
             <span class="live-indicator-dot"></span>
           </span>
-          <span class="text-emerald-400 font-semibold tracking-wide uppercase">Open Now</span>
+          <span class="text-emerald-400 font-semibold tracking-wide uppercase" data-i18n="hours.open_now">Open Now</span>
           <span class="text-slate-400 ml-1">• Closes at 6:00 PM</span>
         </span>
         <span class="hidden md:inline-flex items-center text-slate-400">
           <i data-lucide="map-pin" class="w-3.5 h-3.5 text-red-500 mr-1.5"></i>
           3100 W Sirius Ave Ste 107B, Las Vegas, NV 89102
         </span>
-        <span class="bg-red-950/60 text-red-400 border border-red-800/40 px-2 py-0.5 rounded-full font-medium text-[11px] flex items-center">
-          <i data-lucide="languages" class="w-3 h-3 mr-1"></i> ¡Hablamos Español!
-        </span>
+        
+        <!-- Language Switcher Pill (Top Bar) -->
+        <div class="inline-flex items-center bg-slate-950/80 p-0.5 rounded-full border border-slate-700 text-[11px] font-bold shadow-sm">
+          <button type="button" class="lang-btn active px-2.5 py-0.5 rounded-full text-white bg-red-600 transition-all" data-lang="en">EN</button>
+          <button type="button" class="lang-btn px-2.5 py-0.5 rounded-full text-slate-400 hover:text-white transition-all" data-lang="es">ES</button>
+        </div>
       </div>
 
       <div class="flex items-center gap-4 text-xs">
         <span class="hidden lg:inline text-amber-400 font-semibold flex items-center">
-          <i data-lucide="award" class="w-3.5 h-3.5 mr-1 text-amber-400"></i> 100% Work Guaranteed
+          <i data-lucide="award" class="w-3.5 h-3.5 mr-1 text-amber-400"></i> <span data-i18n="nav.guarantee">100% Work Guaranteed</span>
         </span>
         <a href="tel:7023267375" class="text-white hover:text-red-400 font-bold flex items-center transition-colors">
           <i data-lucide="phone-call" class="w-3.5 h-3.5 text-red-500 mr-1.5 animate-pulse"></i>
-          Call Now: (702) 326-7375
+          <span data-i18n="nav.call_now">Call Now: (702) 326-7375</span>
         </a>
       </div>
     </div>
@@ -209,36 +212,42 @@
 
         <!-- Desktop Nav Links -->
         <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-200">
-          <a href="#services" class="hover:text-red-400 transition-colors">Services</a>
+          <a href="#services" class="hover:text-red-400 transition-colors" data-i18n="nav.services">Services</a>
           <a href="#specials" class="hover:text-red-400 transition-colors flex items-center gap-1.5">
             <span class="relative flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
             </span>
-            Specials & Coupons
+            <span data-i18n="nav.specials">Specials & Coupons</span>
           </a>
-          <a href="#why-us" class="hover:text-red-400 transition-colors">Why Us</a>
-          <a href="#reviews" class="hover:text-red-400 transition-colors">5.0★ Reviews</a>
-          <a href="#location" class="hover:text-red-400 transition-colors">Location & Hours</a>
-          <a href="#faq" class="hover:text-red-400 transition-colors">FAQ</a>
+          <a href="#why-us" class="hover:text-red-400 transition-colors" data-i18n="nav.why_us">Why Us</a>
+          <a href="#reviews" class="hover:text-red-400 transition-colors" data-i18n="nav.reviews">5.0★ Reviews</a>
+          <a href="#location" class="hover:text-red-400 transition-colors" data-i18n="nav.location">Location & Hours</a>
+          <a href="#faq" class="hover:text-red-400 transition-colors" data-i18n="nav.faq">FAQ</a>
         </nav>
 
-        <!-- Right Header Action CTAs -->
-        <div class="hidden sm:flex items-center gap-3">
-          <a href="tel:7023267375" class="inline-flex items-center px-4 py-2.5 rounded-lg text-sm font-bold text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 transition-all shadow-sm">
+        <!-- Right Header Action CTAs & Language Switcher -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Quick Language Toggle Button -->
+          <button type="button" class="js-toggle-lang btn-touch flex items-center gap-1.5 px-2.5 py-2 rounded-lg bg-slate-800/90 hover:bg-slate-700 active:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-200 hover:text-white transition-all shadow-sm" title="Cambiar a Español / Switch to English">
+            <i data-lucide="globe" class="w-4 h-4 text-red-400"></i>
+            <span class="js-lang-label">ES</span>
+          </button>
+
+          <a href="tel:7023267375" class="hidden sm:inline-flex items-center px-4 py-2.5 rounded-lg text-sm font-bold text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 transition-all shadow-sm">
             <i data-lucide="phone" class="w-4 h-4 text-red-400 mr-2"></i>
             (702) 326-7375
           </a>
-          <a href="#appointment-form" class="inline-flex items-center px-4 py-2.5 rounded-lg text-sm font-bold text-white bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 shadow-lg shadow-red-600/25 transition-all transform hover:-translate-y-0.5">
+          <a href="#appointment-form" class="hidden sm:inline-flex items-center px-4 py-2.5 rounded-lg text-sm font-bold text-white bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 shadow-lg shadow-red-600/25 transition-all transform hover:-translate-y-0.5">
             <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
-            Free Estimate
+            <span data-i18n="nav.estimate">Free Estimate</span>
           </a>
-        </div>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobileMenuBtn" aria-label="Open Navigation Menu" class="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none">
-          <i data-lucide="menu" class="w-7 h-7"></i>
-        </button>
+          <!-- Mobile Menu Toggle Button -->
+          <button id="mobileMenuBtn" aria-label="Open Navigation Menu" class="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none">
+            <i data-lucide="menu" class="w-7 h-7"></i>
+          </button>
+        </div>
 
       </div>
     </div>
@@ -260,20 +269,32 @@
           </button>
         </div>
 
-        <div class="mt-6 flex flex-col space-y-4 text-base font-medium">
-          <a href="#services" class="mobile-nav-link text-slate-200 hover:text-red-400 py-2 border-b border-slate-800/60">Services</a>
+        <!-- Mobile Drawer Language Switcher -->
+        <div class="mt-4 p-2.5 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center justify-between">
+          <span class="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
+            <i data-lucide="globe" class="w-4 h-4 text-red-400"></i>
+            <span>Language / Idioma:</span>
+          </span>
+          <div class="inline-flex items-center bg-slate-900 p-0.5 rounded-lg border border-slate-700 text-xs font-bold">
+            <button type="button" class="lang-btn active px-3 py-1 rounded-md text-white bg-red-600 transition-all" data-lang="en">EN</button>
+            <button type="button" class="lang-btn px-3 py-1 rounded-md text-slate-400 hover:text-white transition-all" data-lang="es">ES</button>
+          </div>
+        </div>
+
+        <div class="mt-4 flex flex-col space-y-3 text-base font-medium">
+          <a href="#services" class="mobile-nav-link text-slate-200 hover:text-red-400 py-2 border-b border-slate-800/60" data-i18n="nav.services">Services</a>
           <a href="#specials" class="mobile-nav-link text-slate-200 hover:text-red-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
-            <span>Specials & Deals</span>
+            <span data-i18n="nav.specials">Specials & Deals</span>
             <span class="bg-red-600 text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded-full">$29.95 Deal</span>
           </a>
-          <a href="#why-us" class="mobile-nav-link text-slate-200 hover:text-red-400 py-2 border-b border-slate-800/60">Why Choose Us</a>
+          <a href="#why-us" class="mobile-nav-link text-slate-200 hover:text-red-400 py-2 border-b border-slate-800/60" data-i18n="nav.why_us">Why Choose Us</a>
           <a href="#reviews" class="mobile-nav-link text-slate-200 hover:text-red-400 py-2 border-b border-slate-800/60 flex items-center justify-between">
-            <span>Customer Reviews</span>
+            <span data-i18n="nav.reviews">Customer Reviews</span>
             <span class="text-amber-400 text-xs font-bold">5.0 ★</span>
           </a>
-          <a href="#location" class="mobile-nav-link text-slate-200 hover:text-red-400 py-2 border-b border-slate-800/60">Location & Hours</a>
-          <a href="#faq" class="mobile-nav-link text-slate-200 hover:text-red-400 py-2 border-b border-slate-800/60">FAQ</a>
-          <a href="#appointment-form" class="mobile-nav-link text-red-400 font-bold py-2">Get Free Estimate</a>
+          <a href="#location" class="mobile-nav-link text-slate-200 hover:text-red-400 py-2 border-b border-slate-800/60" data-i18n="nav.location">Location & Hours</a>
+          <a href="#faq" class="mobile-nav-link text-slate-200 hover:text-red-400 py-2 border-b border-slate-800/60" data-i18n="nav.faq">FAQ</a>
+          <a href="#appointment-form" class="mobile-nav-link text-red-400 font-bold py-2" data-i18n="nav.estimate">Get Free Estimate</a>
         </div>
       </div>
 
@@ -313,19 +334,19 @@
                 <i data-lucide="star" class="w-4 h-4 fill-amber-400 mr-1"></i>
                 <i data-lucide="star" class="w-4 h-4 fill-amber-400 mr-1"></i>
                 <i data-lucide="star" class="w-4 h-4 fill-amber-400 mr-1.5"></i>
-                <span>5.0 ★ Google Rating</span>
+                <span data-i18n="hero.rating">5.0 ★ Google Rating</span>
               </div>
               <span class="text-slate-500 hidden sm:inline">•</span>
-              <span class="text-slate-300 text-xs font-semibold">114+ Verified Local Reviews</span>
+              <span class="text-slate-300 text-xs font-semibold" data-i18n="hero.reviews">114+ Verified Local Reviews</span>
             </div>
 
             <!-- Main Headline -->
-            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white font-['Outfit'] tracking-tight leading-[1.1] mb-6">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white font-['Outfit'] tracking-tight leading-[1.1] mb-6" data-i18n-html="hero.headline_html">
               Las Vegas’ Trusted Mechanic – <span class="text-gradient-red">Quality Repairs</span> You Can Rely On
             </h1>
 
             <!-- Subheadline -->
-            <p class="text-base sm:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
+            <p class="text-base sm:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8" data-i18n="hero.subheadline">
               We service and repair all makes and models. Fast turnaround, transparent pricing, and <strong class="text-white font-semibold">100% work guaranteed</strong> by certified master mechanics Antonio & Lorenzo.
             </p>
 
@@ -333,11 +354,11 @@
             <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 mb-10">
               <a href="tel:7023267375" class="btn-touch w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-extrabold text-white bg-red-600 hover:bg-red-500 active:bg-red-700 shadow-xl shadow-red-600/30 transition-all transform hover:-translate-y-0.5 group">
                 <i data-lucide="phone-call" class="w-5 h-5 mr-3 group-hover:scale-110 transition-transform"></i>
-                Call (702) 326-7375
+                <span data-i18n="hero.call_btn">Call (702) 326-7375</span>
               </a>
               <a href="#appointment-form" class="btn-touch w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-bold text-slate-100 bg-slate-800/90 hover:bg-slate-700 active:bg-slate-800 border border-slate-700 shadow-lg transition-all transform hover:-translate-y-0.5">
                 <i data-lucide="clipboard-check" class="w-5 h-5 text-red-400 mr-2.5"></i>
-                Request Free Estimate
+                <span data-i18n="hero.estimate_btn">Request Free Estimate</span>
               </a>
             </div>
 
@@ -348,8 +369,8 @@
                   <i data-lucide="shield-check" class="w-4 h-4"></i>
                 </div>
                 <div>
-                  <div class="text-xs font-bold text-white">100% Guaranteed</div>
-                  <div class="text-[11px] text-slate-400">Parts & Labor Covered</div>
+                  <div class="text-xs font-bold text-white" data-i18n="hero.pill_guarantee">100% Guaranteed</div>
+                  <div class="text-[11px] text-slate-400" data-i18n="hero.pill_guarantee_sub">Parts & Labor Covered</div>
                 </div>
               </div>
 
@@ -358,8 +379,8 @@
                   <i data-lucide="zap" class="w-4 h-4"></i>
                 </div>
                 <div>
-                  <div class="text-xs font-bold text-white">Fast Turnaround</div>
-                  <div class="text-[11px] text-slate-400">Same-Day Availability</div>
+                  <div class="text-xs font-bold text-white" data-i18n="hero.pill_fast">Fast Turnaround</div>
+                  <div class="text-[11px] text-slate-400" data-i18n="hero.pill_fast_sub">Same-Day Availability</div>
                 </div>
               </div>
 
@@ -368,8 +389,8 @@
                   <i data-lucide="dollar-sign" class="w-4 h-4"></i>
                 </div>
                 <div>
-                  <div class="text-xs font-bold text-white">Free Estimates</div>
-                  <div class="text-[11px] text-slate-400">Zero Pressure Quotes</div>
+                  <div class="text-xs font-bold text-white" data-i18n="hero.pill_free">Free Estimates</div>
+                  <div class="text-[11px] text-slate-400" data-i18n="hero.pill_free_sub">Zero Pressure Quotes</div>
                 </div>
               </div>
             </div>
@@ -384,28 +405,28 @@
               <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-700/60">
                 <div class="flex items-center gap-2">
                   <span class="w-3 h-3 rounded-full bg-red-500 animate-ping"></span>
-                  <span class="text-xs font-bold uppercase tracking-wider text-red-400">Quick Shop Pass</span>
+                  <span class="text-xs font-bold uppercase tracking-wider text-red-400" data-i18n="hero.pass_title">Quick Shop Pass</span>
                 </div>
                 <span class="text-xs text-slate-400">3100 W Sirius Ave</span>
               </div>
 
               <!-- Feature Special Box inside Hero -->
               <div class="bg-gradient-to-br from-red-950/70 to-slate-900 border border-red-500/40 rounded-xl p-5 mb-6 relative">
-                <span class="absolute -top-3 right-4 bg-red-600 text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow-md tracking-wider">
+                <span class="absolute -top-3 right-4 bg-red-600 text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow-md tracking-wider" data-i18n="hero.deal_tag">
                   Featured Deal
                 </span>
-                <div class="text-xs font-semibold text-slate-300 uppercase tracking-wide">Synthetic Blend Oil Special</div>
+                <div class="text-xs font-semibold text-slate-300 uppercase tracking-wide" data-i18n="hero.deal_title">Synthetic Blend Oil Special</div>
                 <div class="flex items-baseline gap-2 mt-1">
                   <span class="text-3xl font-black text-white font-['Outfit']">$29.95</span>
                   <span class="text-xs text-slate-400 line-through">$59.95</span>
-                  <span class="text-xs text-emerald-400 font-bold ml-auto">+ Free Safety Check</span>
+                  <span class="text-xs text-emerald-400 font-bold ml-auto" data-i18n="hero.deal_free">+ Free Safety Check</span>
                 </div>
-                <p class="text-xs text-slate-300 mt-2">Up to 5 qts synthetic blend, new filter, and multi-point brake inspection.</p>
+                <p class="text-xs text-slate-300 mt-2" data-i18n="hero.deal_desc">Up to 5 qts synthetic blend, new filter, and multi-point brake inspection.</p>
                 <button class="js-claim-coupon w-full mt-4 py-2.5 bg-red-600 hover:bg-red-500 text-white text-xs font-bold rounded-lg uppercase tracking-wider transition-colors shadow-md flex items-center justify-center gap-2"
                         data-code="OIL2995"
                         data-service="Oil & Filter Services"
                         data-title="$29.95 Oil Change & Brake Special">
-                  <i data-lucide="tag" class="w-3.5 h-3.5"></i> Claim $29.95 Offer
+                  <i data-lucide="tag" class="w-3.5 h-3.5"></i> <span data-i18n="hero.deal_claim">Claim $29.95 Offer</span>
                 </button>
               </div>
 
@@ -413,29 +434,29 @@
               <div class="space-y-3 text-xs text-slate-300">
                 <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-800/60">
                   <span class="flex items-center text-slate-300">
-                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 mr-2"></i> All Vehicle Makes & Models
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 mr-2"></i> <span data-i18n="hero.makes">All Vehicle Makes & Models</span>
                   </span>
-                  <span class="text-slate-400 font-medium">Domestic & Import</span>
+                  <span class="text-slate-400 font-medium" data-i18n="hero.makes_sub">Domestic & Import</span>
                 </div>
                 <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-800/60">
                   <span class="flex items-center text-slate-300">
-                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 mr-2"></i> Lead Master Mechanics
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 mr-2"></i> <span data-i18n="hero.mechanics">Lead Master Mechanics</span>
                   </span>
                   <span class="text-white font-semibold">Antonio & Lorenzo</span>
                 </div>
                 <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-800/60">
                   <span class="flex items-center text-slate-300">
-                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 mr-2"></i> Diagnostic Scanning
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 mr-2"></i> <span data-i18n="hero.diag">Diagnostic Scanning</span>
                   </span>
-                  <span class="text-emerald-400 font-semibold">State-of-the-Art</span>
+                  <span class="text-emerald-400 font-semibold" data-i18n="hero.diag_sub">State-of-the-Art</span>
                 </div>
               </div>
 
               <!-- Direct Hotline Callout -->
               <div class="mt-6 pt-4 border-t border-slate-700/60 text-center">
-                <p class="text-xs text-slate-400 mb-2">Need immediate roadside or repair advice?</p>
+                <p class="text-xs text-slate-400 mb-2" data-i18n="hero.advice">Need immediate roadside or repair advice?</p>
                 <a href="tel:7023267375" class="text-sm font-black text-red-400 hover:text-red-300 flex items-center justify-center gap-1.5 transition-colors">
-                  <i data-lucide="phone" class="w-4 h-4"></i> Call Master Tech: (702) 326-7375
+                  <i data-lucide="phone" class="w-4 h-4"></i> <span data-i18n="hero.call_tech">Call Master Tech: (702) 326-7375</span>
                 </a>
               </div>
 
@@ -458,8 +479,8 @@
             <div class="w-10 h-10 rounded-full bg-red-600/20 text-red-500 flex items-center justify-center mb-1.5 animate-pulse">
               <i data-lucide="phone" class="w-5 h-5"></i>
             </div>
-            <span class="text-xs font-bold text-white leading-tight">Call Shop</span>
-            <span class="text-[10px] text-red-400 font-semibold">(702) 326-7375</span>
+            <span class="text-xs font-bold text-white leading-tight" data-i18n="hub.call">Call Shop</span>
+            <span class="text-[10px] text-red-400 font-semibold" data-i18n="hub.call_sub">(702) 326-7375</span>
           </a>
 
           <!-- Tile 2: Directions -->
@@ -467,8 +488,8 @@
             <div class="w-10 h-10 rounded-full bg-slate-800 text-slate-200 flex items-center justify-center mb-1.5">
               <i data-lucide="navigation" class="w-5 h-5 text-emerald-400"></i>
             </div>
-            <span class="text-xs font-bold text-white leading-tight">Directions</span>
-            <span class="text-[10px] text-slate-400">Sirius & Valley View</span>
+            <span class="text-xs font-bold text-white leading-tight" data-i18n="hub.directions">Directions</span>
+            <span class="text-[10px] text-slate-400" data-i18n="hub.directions_sub">Sirius & Valley View</span>
           </a>
 
           <!-- Tile 3: $29.95 Deal -->
@@ -476,8 +497,8 @@
             <div class="w-10 h-10 rounded-full bg-slate-800 text-amber-400 flex items-center justify-center mb-1.5">
               <i data-lucide="tag" class="w-5 h-5"></i>
             </div>
-            <span class="text-xs font-bold text-white leading-tight">$29.95 Deal</span>
-            <span class="text-[10px] text-amber-400">Oil + Inspection</span>
+            <span class="text-xs font-bold text-white leading-tight" data-i18n="hub.deal">$29.95 Deal</span>
+            <span class="text-[10px] text-amber-400" data-i18n="hub.deal_sub">Oil + Inspection</span>
           </a>
 
           <!-- Tile 4: Free Estimate -->
@@ -485,8 +506,8 @@
             <div class="w-10 h-10 rounded-full bg-slate-800 text-slate-200 flex items-center justify-center mb-1.5">
               <i data-lucide="clipboard-check" class="w-5 h-5 text-red-400"></i>
             </div>
-            <span class="text-xs font-bold text-white leading-tight">Get Estimate</span>
-            <span class="text-[10px] text-slate-400">Free & Fast</span>
+            <span class="text-xs font-bold text-white leading-tight" data-i18n="hub.estimate">Get Estimate</span>
+            <span class="text-[10px] text-slate-400" data-i18n="hub.estimate_sub">Free & Fast</span>
           </a>
 
         </div>
@@ -502,19 +523,19 @@
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-12">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/80 border border-red-700/50 text-red-400 text-xs font-bold uppercase tracking-wider mb-3">
-            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Limited-Time Las Vegas Specials
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> <span data-i18n="specials.badge">Limited-Time Las Vegas Specials</span>
           </div>
-          <h2 class="text-3xl sm:text-4xl font-black text-white font-['Outfit'] tracking-tight">
+          <h2 class="text-3xl sm:text-4xl font-black text-white font-['Outfit'] tracking-tight" data-i18n="specials.title">
             Special Deals & Repair Coupons
           </h2>
-          <p class="text-slate-400 text-sm sm:text-base mt-3">
+          <p class="text-slate-400 text-sm sm:text-base mt-3" data-i18n="specials.desc">
             Present these coupons on your phone or click "Claim Coupon" to lock in exclusive promotional rates for your vehicle.
           </p>
         </div>
 
         <!-- Featured Banner: $29.95 Oil & Brake Special -->
         <div class="relative bg-gradient-to-r from-red-950 via-slate-900 to-slate-900 border-2 border-red-500/60 rounded-2xl p-6 sm:p-10 shadow-2xl mb-8 overflow-hidden">
-          <div class="absolute top-0 right-0 bg-red-600 text-white font-black text-xs uppercase px-6 py-1.5 rounded-bl-xl shadow-lg tracking-widest">
+          <div class="absolute top-0 right-0 bg-red-600 text-white font-black text-xs uppercase px-6 py-1.5 rounded-bl-xl shadow-lg tracking-widest" data-i18n="specials.popular">
             MOST POPULAR IN LAS VEGAS
           </div>
 
@@ -522,32 +543,32 @@
             
             <div class="lg:col-span-8">
               <div class="flex items-center gap-3 mb-3">
-                <span class="px-3 py-1 rounded bg-red-600 text-white font-black text-xs uppercase tracking-wider">
+                <span class="px-3 py-1 rounded bg-red-600 text-white font-black text-xs uppercase tracking-wider" data-i18n="specials.featured">
                   Featured Promotion
                 </span>
-                <span class="text-slate-400 text-xs font-medium">Coupon Code: <code class="text-red-400 font-mono font-bold">OIL2995</code></span>
+                <span class="text-slate-400 text-xs font-medium"><span data-i18n="specials.coupon_code_lbl">Coupon Code:</span> <code class="text-red-400 font-mono font-bold">OIL2995</code></span>
               </div>
 
-              <h3 class="text-2xl sm:text-3xl font-black text-white font-['Outfit'] leading-tight mb-3">
+              <h3 class="text-2xl sm:text-3xl font-black text-white font-['Outfit'] leading-tight mb-3" data-i18n-html="specials.deal_headline_html">
                 Synthetic Blend Oil Change & Brake Special – Only <span class="text-red-500 font-black">$29.95</span>
               </h3>
 
-              <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4" data-i18n-html="specials.deal_desc_html">
                 Includes up to 5 quarts of premium synthetic blend motor oil, high-flow OEM filter replacement, complete chassis lubrication, plus a <strong class="text-emerald-400 font-semibold">FREE 25-Point Comprehensive Vehicle & Brake Safety Inspection</strong>.
               </p>
 
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300">
                 <div class="flex items-center gap-2">
                   <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
-                  <span>Up to 5 Quarts Oil</span>
+                  <span data-i18n="specials.feat1">Up to 5 Quarts Oil</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
-                  <span>New Oil Filter</span>
+                  <span data-i18n="specials.feat2">New Oil Filter</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
-                  <span>Free Brake Pad Check</span>
+                  <span data-i18n="specials.feat3">Free Brake Pad Check</span>
                 </div>
               </div>
             </div>
@@ -555,14 +576,14 @@
             <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-center justify-center gap-4 text-center">
               <div class="text-center">
                 <div class="text-4xl sm:text-5xl font-black text-white font-['Outfit'] leading-none text-gradient-red">$29.95</div>
-                <span class="text-xs text-slate-400">Regular value: $59.95 (Save $30)</span>
+                <span class="text-xs text-slate-400" data-i18n="specials.reg_val">Regular value: $59.95 (Save $30)</span>
               </div>
 
               <button class="js-claim-coupon w-full py-4 px-6 bg-red-600 hover:bg-red-500 text-white font-extrabold text-sm rounded-xl uppercase tracking-wider transition-all shadow-xl shadow-red-600/30 transform hover:scale-[1.02] flex items-center justify-center gap-2"
                       data-code="OIL2995"
                       data-service="Oil & Filter Services"
                       data-title="$29.95 Oil Change & Brake Special">
-                <i data-lucide="check-circle" class="w-5 h-5"></i> Claim Special Offer
+                <i data-lucide="check-circle" class="w-5 h-5"></i> <span data-i18n="specials.claim_btn">Claim Special Offer</span>
               </button>
             </div>
 
@@ -576,11 +597,11 @@
           <div class="bg-card-gradient border border-slate-800 hover:border-red-500/50 rounded-xl p-6 transition-all shadow-lg flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-4">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-red-400 bg-red-950/80 px-2.5 py-1 rounded border border-red-800/40">Brake Special</span>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-red-400 bg-red-950/80 px-2.5 py-1 rounded border border-red-800/40" data-i18n="specials.c1_tag">Brake Special</span>
                 <span class="text-xs text-slate-400 font-mono font-semibold">BRAKE20</span>
               </div>
-              <h4 class="text-xl font-bold text-white font-['Outfit'] mb-2">$20 OFF Brake Service</h4>
-              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              <h4 class="text-xl font-bold text-white font-['Outfit'] mb-2" data-i18n="specials.c1_title">$20 OFF Brake Service</h4>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4" data-i18n="specials.c1_desc">
                 Save $20 on any front or rear brake pad & rotor replacement service. Includes full hardware inspection.
               </p>
             </div>
@@ -588,7 +609,7 @@
                     data-code="BRAKE20"
                     data-service="Brake System Repairs"
                     data-title="$20 OFF Brake Service">
-              <i data-lucide="tag" class="w-3.5 h-3.5"></i> Claim $20 Coupon
+              <i data-lucide="tag" class="w-3.5 h-3.5"></i> <span data-i18n="specials.c1_btn">Claim $20 Coupon</span>
             </button>
           </div>
 
@@ -596,11 +617,11 @@
           <div class="bg-card-gradient border border-slate-800 hover:border-red-500/50 rounded-xl p-6 transition-all shadow-lg flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-4">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-950/80 px-2.5 py-1 rounded border border-amber-800/40">Diagnostics</span>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-950/80 px-2.5 py-1 rounded border border-amber-800/40" data-i18n="specials.c2_tag">Diagnostics</span>
                 <span class="text-xs text-slate-400 font-mono font-semibold">FREESCAN</span>
               </div>
-              <h4 class="text-xl font-bold text-white font-['Outfit'] mb-2">FREE Check Engine Scan</h4>
-              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              <h4 class="text-xl font-bold text-white font-['Outfit'] mb-2" data-i18n="specials.c2_title">FREE Check Engine Scan</h4>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4" data-i18n="specials.c2_desc">
                 Warning light on? Get a complimentary OBD-II computerized error code readout and expert preliminary diagnostic.
               </p>
             </div>
@@ -608,7 +629,7 @@
                     data-code="FREESCAN"
                     data-service="Advanced Diagnostics & Check Engine Light"
                     data-title="FREE Check Engine Scan">
-              <i data-lucide="tag" class="w-3.5 h-3.5"></i> Claim Free Scan
+              <i data-lucide="tag" class="w-3.5 h-3.5"></i> <span data-i18n="specials.c2_btn">Claim Free Scan</span>
             </button>
           </div>
 
@@ -616,11 +637,11 @@
           <div class="bg-card-gradient border border-slate-800 hover:border-red-500/50 rounded-xl p-6 transition-all shadow-lg flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-4">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-800/40">Major Repairs</span>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-800/40" data-i18n="specials.c3_tag">Major Repairs</span>
                 <span class="text-xs text-slate-400 font-mono font-semibold">MAJOR50</span>
               </div>
-              <h4 class="text-xl font-bold text-white font-['Outfit'] mb-2">$50 OFF Major Repairs</h4>
-              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              <h4 class="text-xl font-bold text-white font-['Outfit'] mb-2" data-i18n="specials.c3_title">$50 OFF Major Repairs</h4>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4" data-i18n="specials.c3_desc">
                 Receive $50 off any transmission overhaul, engine repair, timing belt, or suspension job over $500.
               </p>
             </div>
@@ -628,7 +649,7 @@
                     data-code="MAJOR50"
                     data-service="Engine & Transmission Repair"
                     data-title="$50 OFF Major Repairs">
-              <i data-lucide="tag" class="w-3.5 h-3.5"></i> Claim $50 Coupon
+              <i data-lucide="tag" class="w-3.5 h-3.5"></i> <span data-i18n="specials.c3_btn">Claim $50 Coupon</span>
             </button>
           </div>
 
@@ -646,31 +667,31 @@
         <!-- Header -->
         <div class="text-center max-w-3xl mx-auto mb-10">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-semibold uppercase tracking-wider mb-3">
-            <i data-lucide="wrench" class="w-3.5 h-3.5 text-red-500"></i> Full-Service Automotive Excellence
+            <i data-lucide="wrench" class="w-3.5 h-3.5 text-red-500"></i> <span data-i18n="services.badge">Full-Service Automotive Excellence</span>
           </div>
-          <h2 class="text-3xl sm:text-4xl font-black text-white font-['Outfit'] tracking-tight">
+          <h2 class="text-3xl sm:text-4xl font-black text-white font-['Outfit'] tracking-tight" data-i18n="services.title">
             Expert Auto Repair Services in Las Vegas
           </h2>
-          <p class="text-slate-400 text-sm sm:text-base mt-3">
+          <p class="text-slate-400 text-sm sm:text-base mt-3" data-i18n="services.desc">
             From routine scheduled maintenance to advanced engine overhauls, our certified technicians handle every vehicle with precision, speed, and integrity.
           </p>
         </div>
 
         <!-- Service Category Filter Tabs (Swipeable on Mobile) -->
         <div class="filter-scroll-container sm:flex-wrap items-center justify-start sm:justify-center mb-10 sm:mb-12">
-          <button class="service-tab btn-touch active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-red-600 text-white border border-red-600 shadow-md" data-filter="all">
+          <button class="service-tab btn-touch active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-red-600 text-white border border-red-600 shadow-md" data-filter="all" data-i18n="services.tab_all">
             All Services
           </button>
-          <button class="service-tab btn-touch px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700" data-filter="maintenance">
+          <button class="service-tab btn-touch px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700" data-filter="maintenance" data-i18n="services.tab_maint">
             Oil & Maintenance
           </button>
-          <button class="service-tab btn-touch px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700" data-filter="brakes">
+          <button class="service-tab btn-touch px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700" data-filter="brakes" data-i18n="services.tab_brakes">
             Brakes & Suspension
           </button>
-          <button class="service-tab btn-touch px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700" data-filter="diagnostics">
+          <button class="service-tab btn-touch px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700" data-filter="diagnostics" data-i18n="services.tab_diag">
             Diagnostics & Electrical
           </button>
-          <button class="service-tab btn-touch px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700" data-filter="engine">
+          <button class="service-tab btn-touch px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700" data-filter="engine" data-i18n="services.tab_engine">
             Engine & Transmission
           </button>
         </div>
@@ -685,10 +706,10 @@
                 <i data-lucide="droplet" class="w-7 h-7"></i>
               </div>
               <div class="flex items-center justify-between mb-2">
-                <h3 class="text-xl font-bold text-white font-['Outfit']">Oil & Filter Services</h3>
-                <span class="text-xs text-red-400 font-bold bg-red-950/60 px-2 py-0.5 rounded">From $29.95</span>
+                <h3 class="text-xl font-bold text-white font-['Outfit']" data-i18n="services.s1_title">Oil & Filter Services</h3>
+                <span class="text-xs text-red-400 font-bold bg-red-950/60 px-2 py-0.5 rounded" data-i18n="services.s1_tag">From $29.95</span>
               </div>
-              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6" data-i18n="services.s1_desc">
                 Keep your engine running at peak efficiency and protect against extreme Las Vegas heat with regular oil and filter changes.
               </p>
               <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
@@ -701,7 +722,7 @@
             <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
               <span class="text-[11px] text-slate-400 font-medium">⏱️ Avg. 30–45 mins</span>
               <a href="#appointment-form" class="text-xs font-bold text-red-400 hover:text-red-300 flex items-center gap-1 group">
-                Schedule Service <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                <span data-i18n="services.schedule_btn">Schedule Service</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
               </a>
             </div>
           </div>
@@ -713,10 +734,10 @@
                 <i data-lucide="disc" class="w-7 h-7"></i>
               </div>
               <div class="flex items-center justify-between mb-2">
-                <h3 class="text-xl font-bold text-white font-['Outfit']">Brake System Repairs</h3>
-                <span class="text-xs text-red-400 font-bold bg-red-950/60 px-2 py-0.5 rounded">Free Inspection</span>
+                <h3 class="text-xl font-bold text-white font-['Outfit']" data-i18n="services.s2_title">Brake System Repairs</h3>
+                <span class="text-xs text-red-400 font-bold bg-red-950/60 px-2 py-0.5 rounded" data-i18n="services.s2_tag">Free Inspection</span>
               </div>
-              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6" data-i18n="services.s2_desc">
                 Your safety is paramount. We deliver premium stopping power with high-grade ceramic pads and precision rotor resurfacing.
               </p>
               <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
@@ -729,7 +750,7 @@
             <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
               <span class="text-[11px] text-slate-400 font-medium">⏱️ Same-day service</span>
               <a href="#appointment-form" class="text-xs font-bold text-red-400 hover:text-red-300 flex items-center gap-1 group">
-                Schedule Service <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                <span data-i18n="services.schedule_btn">Schedule Service</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
               </a>
             </div>
           </div>
@@ -741,10 +762,10 @@
                 <i data-lucide="activity" class="w-7 h-7"></i>
               </div>
               <div class="flex items-center justify-between mb-2">
-                <h3 class="text-xl font-bold text-white font-['Outfit']">Advanced Diagnostics</h3>
-                <span class="text-xs text-emerald-400 font-bold bg-emerald-950/60 px-2 py-0.5 rounded">Computer Scan</span>
+                <h3 class="text-xl font-bold text-white font-['Outfit']" data-i18n="services.s3_title">Advanced Diagnostics</h3>
+                <span class="text-xs text-emerald-400 font-bold bg-emerald-950/60 px-2 py-0.5 rounded" data-i18n="services.s3_tag">Computer Scan</span>
               </div>
-              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6" data-i18n="services.s3_desc">
                 Eliminate guesswork. We pinpoint sensor faults, check engine light warnings, and complex electrical gremlins accurately.
               </p>
               <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
@@ -757,7 +778,7 @@
             <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
               <span class="text-[11px] text-slate-400 font-medium">⏱️ Fast 15-min scan</span>
               <a href="#appointment-form" class="text-xs font-bold text-red-400 hover:text-red-300 flex items-center gap-1 group">
-                Schedule Service <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                <span data-i18n="services.schedule_btn">Schedule Service</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
               </a>
             </div>
           </div>
@@ -769,10 +790,10 @@
                 <i data-lucide="cpu" class="w-7 h-7"></i>
               </div>
               <div class="flex items-center justify-between mb-2">
-                <h3 class="text-xl font-bold text-white font-['Outfit']">Engine & Transmission</h3>
-                <span class="text-xs text-amber-400 font-bold bg-amber-950/60 px-2 py-0.5 rounded">Master Level</span>
+                <h3 class="text-xl font-bold text-white font-['Outfit']" data-i18n="services.s4_title">Engine & Transmission</h3>
+                <span class="text-xs text-amber-400 font-bold bg-amber-950/60 px-2 py-0.5 rounded" data-i18n="services.s4_tag">Master Level</span>
               </div>
-              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6" data-i18n="services.s4_desc">
                 Heavy mechanical expertise from Antonio & Lorenzo. From head gasket replacements to full engine swaps and transmission flushes.
               </p>
               <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
@@ -785,7 +806,7 @@
             <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
               <span class="text-[11px] text-slate-400 font-medium">🛡️ 100% Work Guaranteed</span>
               <a href="#appointment-form" class="text-xs font-bold text-red-400 hover:text-red-300 flex items-center gap-1 group">
-                Schedule Service <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                <span data-i18n="services.schedule_btn">Schedule Service</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
               </a>
             </div>
           </div>
@@ -797,10 +818,10 @@
                 <i data-lucide="clipboard-list" class="w-7 h-7"></i>
               </div>
               <div class="flex items-center justify-between mb-2">
-                <h3 class="text-xl font-bold text-white font-['Outfit']">General Maintenance</h3>
-                <span class="text-xs text-emerald-400 font-bold bg-emerald-950/60 px-2 py-0.5 rounded">30k/60k/90k</span>
+                <h3 class="text-xl font-bold text-white font-['Outfit']" data-i18n="services.s5_title">General Maintenance</h3>
+                <span class="text-xs text-emerald-400 font-bold bg-emerald-950/60 px-2 py-0.5 rounded" data-i18n="services.s5_tag">30k/60k/90k</span>
               </div>
-              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6" data-i18n="services.s5_desc">
                 Preventative care that extends the life of your vehicle and protects against unexpected breakdowns on the I-15 or desert heat.
               </p>
               <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
@@ -813,7 +834,7 @@
             <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
               <span class="text-[11px] text-slate-400 font-medium">📋 Comprehensive Report</span>
               <a href="#appointment-form" class="text-xs font-bold text-red-400 hover:text-red-300 flex items-center gap-1 group">
-                Schedule Service <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                <span data-i18n="services.schedule_btn">Schedule Service</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
               </a>
             </div>
           </div>
@@ -825,10 +846,10 @@
                 <i data-lucide="git-commit" class="w-7 h-7"></i>
               </div>
               <div class="flex items-center justify-between mb-2">
-                <h3 class="text-xl font-bold text-white font-['Outfit']">Suspension & Steering</h3>
-                <span class="text-xs text-slate-300 font-bold bg-slate-800 px-2 py-0.5 rounded">Smooth Ride</span>
+                <h3 class="text-xl font-bold text-white font-['Outfit']" data-i18n="services.s6_title">Suspension & Steering</h3>
+                <span class="text-xs text-slate-300 font-bold bg-slate-800 px-2 py-0.5 rounded" data-i18n="services.s6_tag">Smooth Ride</span>
               </div>
-              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6" data-i18n="services.s6_desc">
                 Restore precise handling and comfort. We repair worn struts, ball joints, control arms, and noisy serpentine drive belts.
               </p>
               <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
@@ -841,7 +862,7 @@
             <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
               <span class="text-[11px] text-slate-400 font-medium">🚗 Ride Comfort Check</span>
               <a href="#appointment-form" class="text-xs font-bold text-red-400 hover:text-red-300 flex items-center gap-1 group">
-                Schedule Service <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                <span data-i18n="services.schedule_btn">Schedule Service</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
               </a>
             </div>
           </div>
@@ -869,8 +890,8 @@
                   <i data-lucide="shield-alert" class="w-8 h-8"></i>
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold text-white font-['Outfit']">Our Promise to You</h3>
-                  <p class="text-xs text-red-400 font-semibold uppercase tracking-wider">100% Honest • Zero Upsells</p>
+                  <h3 class="text-xl font-bold text-white font-['Outfit']" data-i18n="why.promise_title">Our Promise to You</h3>
+                  <p class="text-xs text-red-400 font-semibold uppercase tracking-wider" data-i18n="why.promise_tag">100% Honest • Zero Upsells</p>
                 </div>
               </div>
 
@@ -885,7 +906,7 @@
                     <p class="text-xs text-slate-400">Master Technicians & Shop Leaders</p>
                   </div>
                 </div>
-                <p class="text-xs text-slate-300 italic">
+                <p class="text-xs text-slate-300 italic" data-i18n="why.promise_quote">
                   "We treat every car like our own family's vehicle. You get straight talk, clear explanations, and fair pricing every single time."
                 </p>
               </div>
@@ -908,12 +929,12 @@
           <!-- Right Content Column -->
           <div class="lg:col-span-7 order-1 lg:order-2">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/80 border border-red-700/50 text-red-400 text-xs font-bold uppercase tracking-wider mb-3">
-              <i data-lucide="check-check" class="w-3.5 h-3.5"></i> The Fix It All Advantage
+              <i data-lucide="check-check" class="w-3.5 h-3.5"></i> <span data-i18n="why.badge">The Fix It All Advantage</span>
             </div>
-            <h2 class="text-3xl sm:text-4xl font-black text-white font-['Outfit'] tracking-tight mb-6">
+            <h2 class="text-3xl sm:text-4xl font-black text-white font-['Outfit'] tracking-tight mb-6" data-i18n="why.title">
               Why Las Vegas Drivers Choose Us Over the Dealerships
             </h2>
-            <p class="text-slate-300 text-base leading-relaxed mb-8">
+            <p class="text-slate-300 text-base leading-relaxed mb-8" data-i18n="why.desc">
               Dealerships charge exorbitant labor rates and try to sell repairs you don’t need. At Fix It All Auto Repair on Sirius Ave, we prioritize honesty, speed, and real craftsmanship.
             </p>
 
@@ -924,8 +945,8 @@
                   <i data-lucide="eye" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <h4 class="text-base font-bold text-white mb-1">Transparent Estimates</h4>
-                  <p class="text-xs text-slate-400 leading-relaxed">No hidden charges or surprise line items. We explain every repair before touching a bolt.</p>
+                  <h4 class="text-base font-bold text-white mb-1" data-i18n="why.p1_title">Transparent Estimates</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed" data-i18n="why.p1_desc">No hidden charges or surprise line items. We explain every repair before touching a bolt.</p>
                 </div>
               </div>
 
@@ -934,8 +955,8 @@
                   <i data-lucide="clock" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <h4 class="text-base font-bold text-white mb-1">Fast Turnaround</h4>
-                  <p class="text-xs text-slate-400 leading-relaxed">Most general repairs and brake jobs are completed same-day to get you back on the road safely.</p>
+                  <h4 class="text-base font-bold text-white mb-1" data-i18n="why.p2_title">Fast Turnaround</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed" data-i18n="why.p2_desc">Most general repairs and brake jobs are completed same-day to get you back on the road safely.</p>
                 </div>
               </div>
 
@@ -944,8 +965,8 @@
                   <i data-lucide="award" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <h4 class="text-base font-bold text-white mb-1">Master Tech Experience</h4>
-                  <p class="text-xs text-slate-400 leading-relaxed">Decades of combined automotive diagnostic and mechanical mastery on all foreign and domestic cars.</p>
+                  <h4 class="text-base font-bold text-white mb-1" data-i18n="why.p3_title">Master Tech Experience</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed" data-i18n="why.p3_desc">Decades of combined automotive diagnostic and mechanical mastery on all foreign and domestic cars.</p>
                 </div>
               </div>
 
@@ -954,8 +975,8 @@
                   <i data-lucide="shield" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <h4 class="text-base font-bold text-white mb-1">100% Work Guarantee</h4>
-                  <p class="text-xs text-slate-400 leading-relaxed">Every repair is backed with our satisfaction guarantee. If it's not right, we make it right.</p>
+                  <h4 class="text-base font-bold text-white mb-1" data-i18n="why.p4_title">100% Work Guarantee</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed" data-i18n="why.p4_desc">Every repair is backed with our satisfaction guarantee. If it's not right, we make it right.</p>
                 </div>
               </div>
 
@@ -977,12 +998,12 @@
         <!-- Header & Rating Badge -->
         <div class="text-center max-w-3xl mx-auto mb-12">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-3">
-            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i> Verified Customer Testimonials
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i> <span data-i18n="reviews.badge">Verified Customer Testimonials</span>
           </div>
-          <h2 class="text-3xl sm:text-4xl font-black text-white font-['Outfit'] tracking-tight">
+          <h2 class="text-3xl sm:text-4xl font-black text-white font-['Outfit'] tracking-tight" data-i18n="reviews.title">
             What Our Customers Say – 5.0 Stars Across Las Vegas
           </h2>
-          <p class="text-slate-400 text-sm sm:text-base mt-3">
+          <p class="text-slate-400 text-sm sm:text-base mt-3" data-i18n="reviews.desc">
             See why Las Vegas locals trust Antonio, Lorenzo, and the Fix It All team with their daily drivers, family SUVs, and performance vehicles.
           </p>
         </div>
@@ -1009,15 +1030,15 @@
             <div class="flex items-center gap-6 text-xs text-slate-300">
               <div class="text-center">
                 <span class="block text-emerald-400 font-bold text-base">100%</span>
-                <span>Honesty Rating</span>
+                <span data-i18n="reviews.honesty">Honesty Rating</span>
               </div>
               <div class="text-center">
                 <span class="block text-red-400 font-bold text-base">Fast</span>
-                <span>Same-Day Turnaround</span>
+                <span data-i18n="reviews.speed">Same-Day Turnaround</span>
               </div>
               <div class="text-center">
                 <span class="block text-white font-bold text-base">Local</span>
-                <span>Vegas Owned</span>
+                <span data-i18n="reviews.local">Vegas Owned</span>
               </div>
             </div>
           </div>
@@ -1210,12 +1231,12 @@
           <!-- Shop Details & Operating Hours (5 cols) -->
           <div class="lg:col-span-5">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/80 border border-red-700/50 text-red-400 text-xs font-bold uppercase tracking-wider mb-3">
-              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Visit Our Las Vegas Shop
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> <span data-i18n="loc.badge">Visit Our Las Vegas Shop</span>
             </div>
-            <h2 class="text-3xl sm:text-4xl font-black text-white font-['Outfit'] tracking-tight mb-4">
+            <h2 class="text-3xl sm:text-4xl font-black text-white font-['Outfit'] tracking-tight mb-4" data-i18n="loc.title">
               Convenient Westside Location & Hours
             </h2>
-            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6" data-i18n="loc.desc">
               Located right off Valley View Blvd and Sirius Ave, minutes from the Las Vegas Strip, I-15, and Chinatown corridor.
             </p>
 
@@ -1229,13 +1250,13 @@
                   <h3 class="text-base font-bold text-white font-['Outfit']">Fix It All Auto Repair</h3>
                   <p class="text-sm text-slate-200 font-medium mt-0.5">3100 W Sirius Ave, Ste 107B</p>
                   <p class="text-xs text-slate-400">Las Vegas, NV 89102 (Clark County)</p>
-                  <p class="text-[11px] text-slate-500 mt-1">Look for Suite 107B inside the auto business plaza</p>
+                  <p class="text-[11px] text-slate-500 mt-1" data-i18n="loc.suite">Look for Suite 107B inside the auto business plaza</p>
                 </div>
               </div>
 
               <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-3">
                 <a href="https://maps.google.com/?q=3100+W+Sirius+Ave+Ste+107B+Las+Vegas+NV+89102" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2.5 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-lg shadow-md transition-all">
-                  <i data-lucide="navigation" class="w-4 h-4 mr-2"></i> Get Directions (Google Maps)
+                  <i data-lucide="navigation" class="w-4 h-4 mr-2"></i> <span data-i18n="loc.directions_btn">Get Directions (Google Maps)</span>
                 </a>
                 <a href="tel:7023267375" class="inline-flex items-center px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs rounded-lg border border-slate-700 transition-all">
                   <i data-lucide="phone" class="w-4 h-4 text-red-400 mr-2"></i> (702) 326-7375
@@ -1248,7 +1269,7 @@
               <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">
                 <div class="flex items-center gap-2">
                   <i data-lucide="clock" class="w-5 h-5 text-red-400"></i>
-                  <h3 class="text-sm font-bold text-white uppercase tracking-wider">Operating Schedule</h3>
+                  <h3 class="text-sm font-bold text-white uppercase tracking-wider" data-i18n="loc.schedule_title">Operating Schedule</h3>
                 </div>
                 <div class="js-live-status text-xs">
                   <!-- Injected via JavaScript -->
@@ -1257,19 +1278,19 @@
 
               <div class="space-y-2 text-xs">
                 <div class="flex justify-between py-1 border-b border-slate-800/40">
-                  <span class="text-slate-300 font-medium">Monday – Friday</span>
+                  <span class="text-slate-300 font-medium" data-i18n="loc.weekday">Monday – Friday</span>
                   <span class="text-white font-bold">8:00 AM – 6:00 PM</span>
                 </div>
                 <div class="flex justify-between py-1 border-b border-slate-800/40">
-                  <span class="text-slate-300 font-medium">Saturday</span>
+                  <span class="text-slate-300 font-medium" data-i18n="loc.sat">Saturday</span>
                   <span class="text-white font-bold">8:00 AM – 6:00 PM</span>
                 </div>
                 <div class="flex justify-between py-1">
-                  <span class="text-slate-300 font-medium">Sunday</span>
+                  <span class="text-slate-300 font-medium" data-i18n="loc.sun">Sunday</span>
                   <span class="text-amber-400 font-bold">9:00 AM – 6:00 PM</span>
                 </div>
               </div>
-              <p class="text-[11px] text-emerald-400 font-medium mt-3 text-center">
+              <p class="text-[11px] text-emerald-400 font-medium mt-3 text-center" data-i18n="loc.open_note">
                 ✨ Open 7 Days a Week for Your Convenience!
               </p>
             </div>
@@ -1319,14 +1340,14 @@
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
-        <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="text-center max-w-3xl mx-auto mb-10">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/80 border border-red-700/50 text-red-400 text-xs font-bold uppercase tracking-wider mb-3">
-            <i data-lucide="calendar-check" class="w-3.5 h-3.5"></i> Fast & Transparent Quotes
+            <i data-lucide="calculator" class="w-3.5 h-3.5"></i> <span data-i18n="form.badge">Fast & Transparent Quotes</span>
           </div>
-          <h2 class="text-3xl sm:text-4xl font-black text-white font-['Outfit'] tracking-tight">
+          <h2 class="text-3xl sm:text-4xl font-black text-white font-['Outfit'] tracking-tight" data-i18n="form.title">
             Request a Free Estimate & Book Service
           </h2>
-          <p class="text-slate-400 text-sm sm:text-base mt-3">
+          <p class="text-slate-400 text-sm sm:text-base mt-3" data-i18n="form.desc">
             Tell us about your vehicle and what you need. We will review your request and contact you quickly with an upfront, zero-pressure estimate.
           </p>
         </div>
@@ -1340,7 +1361,7 @@
               <div class="text-xs text-emerald-400">Discount has been locked into your appointment request!</div>
             </div>
           </div>
-          <span class="text-xs font-bold bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded">PROMO ACTIVE</span>
+          <span class="text-xs font-bold bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded" data-i18n="form.promo_active">PROMO ACTIVE</span>
         </div>
 
         <!-- Form Card -->
@@ -1352,7 +1373,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
               <div>
                 <label for="fullName" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                  Your Full Name <span class="text-red-500">*</span>
+                  <span data-i18n="form.lbl_name">Your Full Name</span> <span class="text-red-500">*</span>
                 </label>
                 <input 
                   type="text" 
@@ -1367,7 +1388,7 @@
 
               <div>
                 <label for="phone" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                  Phone Number <span class="text-red-500">*</span>
+                  <span data-i18n="form.lbl_phone">Phone Number</span> <span class="text-red-500">*</span>
                 </label>
                 <input 
                   type="tel" 
@@ -1383,7 +1404,7 @@
 
               <div>
                 <label for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                  Email Address <span class="text-slate-500">(Optional)</span>
+                  <span data-i18n="form.lbl_email">Email Address (Optional)</span>
                 </label>
                 <input 
                   type="email" 
@@ -1401,7 +1422,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
               <div>
                 <label for="vehicleYear" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                  Vehicle Year <span class="text-red-500">*</span>
+                  <span data-i18n="form.lbl_year">Vehicle Year</span> <span class="text-red-500">*</span>
                 </label>
                 <input 
                   type="number" 
@@ -1418,7 +1439,7 @@
 
               <div>
                 <label for="vehicleMake" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                  Make <span class="text-red-500">*</span>
+                  <span data-i18n="form.lbl_make">Make</span> <span class="text-red-500">*</span>
                 </label>
                 <input 
                   type="text" 
@@ -1431,7 +1452,7 @@
               </div>
 
               <div>
-                <label for="vehicleModel" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                <label for="vehicleModel" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2" data-i18n="form.lbl_model">
                   Model & Trim
                 </label>
                 <input 
@@ -1448,7 +1469,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
                 <label for="serviceSelect" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                  Primary Service Needed <span class="text-red-500">*</span>
+                  <span data-i18n="form.lbl_service">Primary Service Needed</span> <span class="text-red-500">*</span>
                 </label>
                 <select 
                   id="serviceSelect" 
@@ -1469,8 +1490,8 @@
               </div>
 
               <div>
-                <label for="promoCodeInput" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                  Promo / Coupon Code <span class="text-slate-500">(Optional)</span>
+                <label for="promoCodeInput" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2" data-i18n="form.lbl_promo">
+                  Promo / Coupon Code (Optional)
                 </label>
                 <div class="relative">
                   <input 
@@ -1488,7 +1509,7 @@
             <!-- Row 4: Preferred Date & Time Window -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
-                <label for="preferredDate" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                <label for="preferredDate" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2" data-i18n="form.lbl_date">
                   Preferred Appointment Date
                 </label>
                 <input 
@@ -1500,7 +1521,7 @@
               </div>
 
               <div>
-                <label for="preferredTime" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                <label for="preferredTime" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2" data-i18n="form.lbl_time">
                   Preferred Time of Day
                 </label>
                 <select 
@@ -1518,14 +1539,15 @@
 
             <!-- Row 5: Issue Description / Notes -->
             <div>
-              <label for="issueDetails" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                Describe the Issue or Additional Notes <span class="text-slate-500">(Sounds, symptoms, warning lights, etc.)</span>
+              <label for="issueDetails" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2" data-i18n="form.lbl_notes">
+                Describe the Issue or Additional Notes
               </label>
               <textarea 
                 id="issueDetails" 
                 name="issueDetails" 
                 rows="3" 
                 placeholder="e.g. Squeaking noise when braking at low speeds, check engine light illuminated yesterday..." 
+                data-i18n-placeholder="form.notes_ph"
                 class="custom-input w-full px-4 py-3 rounded-xl text-sm"
               ></textarea>
             </div>
@@ -1534,7 +1556,7 @@
             <div class="pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div class="flex items-center gap-2 text-xs text-slate-400">
                 <i data-lucide="lock" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
-                <span>Your information is 100% confidential. No spam or pressure ever.</span>
+                <span data-i18n="form.confidential">Your information is 100% confidential. No spam or pressure ever.</span>
               </div>
 
               <button 
@@ -1543,7 +1565,7 @@
                 class="w-full sm:w-auto px-10 py-4 rounded-xl text-base font-extrabold text-white bg-red-600 hover:bg-red-500 shadow-xl shadow-red-600/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
               >
                 <i data-lucide="send" class="w-5 h-5"></i>
-                Request Free Estimate
+                <span data-i18n="form.submit_btn">Request Free Estimate</span>
               </button>
             </div>
 
@@ -1562,12 +1584,12 @@
         
         <div class="text-center max-w-2xl mx-auto mb-12">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-semibold uppercase tracking-wider mb-3">
-            <i data-lucide="help-circle" class="w-3.5 h-3.5 text-red-500"></i> Clear Answers
+            <i data-lucide="help-circle" class="w-3.5 h-3.5 text-red-500"></i> <span data-i18n="faq.badge">Clear Answers</span>
           </div>
-          <h2 class="text-3xl font-black text-white font-['Outfit'] tracking-tight">
+          <h2 class="text-3xl font-black text-white font-['Outfit'] tracking-tight" data-i18n="faq.title">
             Frequently Asked Questions
           </h2>
-          <p class="text-slate-400 text-sm mt-2">
+          <p class="text-slate-400 text-sm mt-2" data-i18n="faq.desc">
             Got questions? We believe in 100% transparency before we ever turn a wrench.
           </p>
         </div>
@@ -1577,10 +1599,10 @@
           <!-- FAQ 1 -->
           <div class="faq-item bg-card-gradient border border-slate-800 rounded-xl overflow-hidden">
             <button class="faq-btn w-full p-5 text-left flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-red-400 transition-colors">
-              <span>Do you provide free estimates and computer code scans?</span>
+              <span data-i18n="faq.q1">Do you provide free estimates and computer code scans?</span>
               <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
             </button>
-            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3" data-i18n="faq.a1">
               Yes! We provide free preliminary visual inspections, upfront cost estimates, and complimentary OBD-II check engine light code scans so you understand exactly what your vehicle needs without any pressure.
             </div>
           </div>
@@ -1588,10 +1610,10 @@
           <!-- FAQ 2 -->
           <div class="faq-item bg-card-gradient border border-slate-800 rounded-xl overflow-hidden">
             <button class="faq-btn w-full p-5 text-left flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-red-400 transition-colors">
-              <span>What makes and models do you service?</span>
+              <span data-i18n="faq.q2">What makes and models do you service?</span>
               <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
             </button>
-            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3" data-i18n="faq.a2">
               We service all domestic, Asian, and European makes and models — including Ford, Chevrolet, Toyota, Honda, Nissan, Hyundai, Kia, BMW, Mercedes-Benz, Audi, Volkswagen, Subaru, and Jeep.
             </div>
           </div>
@@ -1599,10 +1621,10 @@
           <!-- FAQ 3 -->
           <div class="faq-item bg-card-gradient border border-slate-800 rounded-xl overflow-hidden">
             <button class="faq-btn w-full p-5 text-left flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-red-400 transition-colors">
-              <span>How fast can you complete an oil change or brake job?</span>
+              <span data-i18n="faq.q3">How fast can you complete an oil change or brake job?</span>
               <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
             </button>
-            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3" data-i18n="faq.a3">
               Our synthetic blend and full synthetic oil changes typically take between 30 to 45 minutes. Standard brake pad and rotor replacements are usually completed the same day within 1 to 2 hours.
             </div>
           </div>
@@ -1610,10 +1632,10 @@
           <!-- FAQ 4 -->
           <div class="faq-item bg-card-gradient border border-slate-800 rounded-xl overflow-hidden">
             <button class="faq-btn w-full p-5 text-left flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-red-400 transition-colors">
-              <span>Do you accept walk-ins or do I need an appointment?</span>
+              <span data-i18n="faq.q4">Do you accept walk-ins or do I need an appointment?</span>
               <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
             </button>
-            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3" data-i18n="faq.a4">
               Walk-ins are always welcome! However, scheduling online or giving us a quick call at (702) 326-7375 guarantees immediate bay priority and minimal wait time.
             </div>
           </div>
@@ -1621,10 +1643,10 @@
           <!-- FAQ 5 -->
           <div class="faq-item bg-card-gradient border border-slate-800 rounded-xl overflow-hidden">
             <button class="faq-btn w-full p-5 text-left flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-red-400 transition-colors">
-              <span>What warranty do you offer on parts and labor?</span>
+              <span data-i18n="faq.q5">What warranty do you offer on parts and labor?</span>
               <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
             </button>
-            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3" data-i18n="faq.a5">
               We stand 100% behind all completed work. We use premium OEM and high-grade aftermarket parts that carry full manufacturer warranties alongside our professional labor guarantee.
             </div>
           </div>
@@ -1632,10 +1654,10 @@
           <!-- FAQ 6 -->
           <div class="faq-item bg-card-gradient border border-slate-800 rounded-xl overflow-hidden">
             <button class="faq-btn w-full p-5 text-left flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-red-400 transition-colors">
-              <span>Do you speak Spanish? / ¿Hablan español?</span>
+              <span data-i18n="faq.q6">Do you speak Spanish? / ¿Hablan español?</span>
               <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
             </button>
-            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3" data-i18n="faq.a6">
               ¡Sí, con mucho gusto! Nuestro equipo habla inglés y español con fluidez para explicarle con total claridad cualquier problema y presupuesto de su vehículo.
             </div>
           </div>
@@ -1805,10 +1827,10 @@
        ========================================================================= -->
   <div class="mobile-bottom-bar flex items-center justify-between gap-2.5 shadow-2xl">
     <a href="tel:7023267375" class="btn-touch w-1/2 h-12 bg-gradient-to-r from-red-600 to-red-700 active:from-red-700 active:to-red-800 text-white font-extrabold text-xs sm:text-sm rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-red-600/30 animate-pulse-glow">
-      <i data-lucide="phone-call" class="w-4 h-4"></i> Call (702) 326-7375
+      <i data-lucide="phone-call" class="w-4 h-4"></i> <span data-i18n="bar.call">Call (702) 326-7375</span>
     </a>
     <a href="#appointment-form" class="btn-touch w-1/2 h-12 bg-slate-800 active:bg-slate-700 text-white font-bold text-xs sm:text-sm rounded-xl border border-slate-700 flex items-center justify-center gap-2 shadow">
-      <i data-lucide="calendar" class="w-4 h-4 text-red-400"></i> Free Estimate
+      <i data-lucide="calendar" class="w-4 h-4 text-red-400"></i> <span data-i18n="bar.estimate">Free Estimate</span>
     </a>
   </div>
 
