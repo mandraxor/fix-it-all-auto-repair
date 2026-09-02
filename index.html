@@ -447,6 +447,53 @@
     </section>
 
     <!-- =========================================================================
+         MOBILE QUICK ACTION HUB (4 APP-LIKE TOUCH TILES)
+         ========================================================================= -->
+    <section class="lg:hidden bg-slate-950 py-4 px-4 border-b border-slate-800">
+      <div class="max-w-xl mx-auto">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+          
+          <!-- Tile 1: Call -->
+          <a href="tel:7023267375" class="btn-touch flex flex-col items-center justify-center p-3 rounded-xl bg-slate-900 border border-red-500/40 hover:border-red-500 active:bg-slate-800 text-center shadow-md">
+            <div class="w-10 h-10 rounded-full bg-red-600/20 text-red-500 flex items-center justify-center mb-1.5 animate-pulse">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+            </div>
+            <span class="text-xs font-bold text-white leading-tight">Call Shop</span>
+            <span class="text-[10px] text-red-400 font-semibold">(702) 326-7375</span>
+          </a>
+
+          <!-- Tile 2: Directions -->
+          <a href="https://maps.google.com/?q=3100+W+Sirius+Ave+Ste+107B+Las+Vegas+NV+89102" target="_blank" rel="noopener noreferrer" class="btn-touch flex flex-col items-center justify-center p-3 rounded-xl bg-slate-900 border border-slate-700/80 hover:border-slate-600 active:bg-slate-800 text-center shadow-md">
+            <div class="w-10 h-10 rounded-full bg-slate-800 text-slate-200 flex items-center justify-center mb-1.5">
+              <i data-lucide="navigation" class="w-5 h-5 text-emerald-400"></i>
+            </div>
+            <span class="text-xs font-bold text-white leading-tight">Directions</span>
+            <span class="text-[10px] text-slate-400">Sirius & Valley View</span>
+          </a>
+
+          <!-- Tile 3: $29.95 Deal -->
+          <a href="#specials" class="btn-touch flex flex-col items-center justify-center p-3 rounded-xl bg-slate-900 border border-slate-700/80 hover:border-slate-600 active:bg-slate-800 text-center shadow-md">
+            <div class="w-10 h-10 rounded-full bg-slate-800 text-amber-400 flex items-center justify-center mb-1.5">
+              <i data-lucide="tag" class="w-5 h-5"></i>
+            </div>
+            <span class="text-xs font-bold text-white leading-tight">$29.95 Deal</span>
+            <span class="text-[10px] text-amber-400">Oil + Inspection</span>
+          </a>
+
+          <!-- Tile 4: Free Estimate -->
+          <a href="#appointment-form" class="btn-touch flex flex-col items-center justify-center p-3 rounded-xl bg-slate-900 border border-slate-700/80 hover:border-slate-600 active:bg-slate-800 text-center shadow-md">
+            <div class="w-10 h-10 rounded-full bg-slate-800 text-slate-200 flex items-center justify-center mb-1.5">
+              <i data-lucide="clipboard-check" class="w-5 h-5 text-red-400"></i>
+            </div>
+            <span class="text-xs font-bold text-white leading-tight">Get Estimate</span>
+            <span class="text-[10px] text-slate-400">Free & Fast</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
          FEATURED SPECIALS & PROMOTIONS CALLOUT
          ========================================================================= -->
     <section id="specials" class="py-16 bg-slate-900 border-y border-slate-800 relative">
@@ -1312,6 +1359,7 @@
                   id="fullName" 
                   name="fullName" 
                   required 
+                  autocomplete="name"
                   placeholder="e.g. John Miller" 
                   class="custom-input w-full px-4 py-3 rounded-xl text-sm"
                 >
@@ -1326,6 +1374,8 @@
                   id="phone" 
                   name="phone" 
                   required 
+                  autocomplete="tel"
+                  inputmode="tel"
                   placeholder="(702) 000-0000" 
                   class="custom-input w-full px-4 py-3 rounded-xl text-sm"
                 >
@@ -1339,6 +1389,8 @@
                   type="email" 
                   id="email" 
                   name="email" 
+                  autocomplete="email"
+                  inputmode="email"
                   placeholder="john@example.com" 
                   class="custom-input w-full px-4 py-3 rounded-xl text-sm"
                 >
@@ -1358,6 +1410,7 @@
                   min="1980" 
                   max="2026" 
                   required 
+                  inputmode="numeric"
                   placeholder="e.g. 2018" 
                   class="custom-input w-full px-4 py-3 rounded-xl text-sm"
                 >
